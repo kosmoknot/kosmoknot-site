@@ -3,32 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Personal Website of KosmoKnot">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>KosmoKnot</title>
-    <link rel="icon" href="./images/icon.png" type="image/icon type">
+    <link rel="icon" href="./images/logo.png" type="image/icon type">
     <link href="./css//style.css" rel="stylesheet" type="text/css" media="all">
     <script src="./script.js"></script>
   </head>
   <body><br><br>
-    <div class="header">
-      <div class="head">
+
+    <div class="head">
+      <div>
         <a href="/index.html">
-          <img id="icon"src='./images/icon.png' onmouseover="this.src='./images/icon2.png';" onmouseout="this.src='./images/icon.png';" />
-            <!-- KosmoKnot -->
+          <img id="icon" src='./images/icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
         </a>
       </div>
       <div>
-        <ul class="nav">
-            <li> <a href="#">Projects</a> </li>
-            <li> <a href="#">Resources</a> </li>
-            <li> <a href="#"> Reading</a> </li>
-            <li> <a href="#"> Writing </a> </li>
-            <li> <a href="#"> Watched</a> </li>
-            <li> <a href="#"> Puzzles</a> </li>
-        </ul>
+        <table cellspacing="0" style="text-align: center;padding:2px">
+          <tr colspan="2">
+            <p id="title" onmouseover="onHover();" onmouseleave="onOut()"><a id='title_content' href="/index.html">KosmoKnot</a></p>
+          </tr>
+          <tr>
+            <td><a href="./projects.html">|Projects|</a> </td>
+            <td><a href="./puzzles.html">|Puzzles|</a></td>
+            <td><a href="./resources.html">|Resources|</a></td>
+          </tr>
+          <tr>
+            <td><a href="./writing.html">|Writing|</a> </td>
+            <td><a href="./reading.html">|Reading|</a> </td>
+            <td><a href="./watched.html">|Watched|</a></td>
+          </tr>
+        </table>
       </div>
     </div>
-
-
-  </body>
-</html>
+    <h1>An Assortment of Projects, Logs, and Resources</h1>
