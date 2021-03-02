@@ -96,13 +96,21 @@ h1{
   margin-left: 25px;
 }
 .section td{
-  font-size: 18px;
+  font-size: 15px;
   text-align: left;
   vertical-align: middle;
-  color: #c9cacc;
+  color: whitesmoke;
+}
+.section td a{
+  text-decoration: none;
+  color: #2bbc8a;
+}
+.section td a:hover{
+  cursor: url(./images/hand.ico),default;
+  color: white;
 }
 .section time{
-  font-size: 18px;
+  font-size: 15px;
   color: #6e6e6e;
 }
 .section h1 a{
@@ -114,7 +122,10 @@ h1{
   display: block;
   text-align: left;
   cursor: url(./images/hand.ico),default;
+}
+.section h1 a:hover{
 
+  color: white;
 }
 
 .browser a{
