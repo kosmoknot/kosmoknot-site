@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>KosmoKnot</title>
     <link rel="icon" href="./images/logo.png" type="image/icon type">
-    <link href="./css//style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all">
     <script src="./script.js"></script>
   </head>
-  <body><br><br>
-
+  <body>
     <div class="head">
       <div>
         <a href="/index.html">
@@ -18,7 +17,7 @@
         </a>
       </div>
       <div>
-        <table cellspacing="0" style="text-align: center;padding:2px">
+        <table cellspacing="0" style="text-align: center;">
           <tr colspan="2">
             <p id="title" onmouseover="onHover();" onmouseleave="onOut()"><a id='title_content' href="/index.html">KosmoKnot</a></p>
           </tr>
@@ -32,7 +31,43 @@
             <td><a href="./reading.html">|Reading|</a> </td>
             <td><a href="./watched.html">|Watched|</a></td>
           </tr>
+          <tr>
+            <td colspan="3">
+              <div class="browser" style="padding-top:10px">
+                <a href="./browser.html">Open 3D Browser</a>
+              </div>
+            </td>
+          </tr>
         </table>
       </div>
     </div>
+    <br>
+
     <h1>An Assortment of Projects, Logs, and Resources</h1>
+    <div class="section">
+      <h1> <a href="./projects.html">Projects</a> </h1>
+        <table style="width: 100%;padding-bottom: 15px;">
+          <colgroup>
+             <col span="1" style="width: 30%;">
+             <col span="1" style="width: 70%;">
+          </colgroup>
+          <tr>
+            <td><time>2018/02/12</time></td>
+            <td>Project1: Did something awesome</td>
+          </tr>
+          <tr>
+            <td><time>2015/02/12</time></td>
+            <td >Project2</td>
+          </tr>
+          <tr>
+            <td><time>2013/02/12</time></td>
+            <td >Project3</td>
+          </tr>
+        </table>
+        <div class="pagination">
+          <a href="./projects.html">Showing 3 of 8</a>
+        </div>
+  </div>
+
+</body>
+</html>
