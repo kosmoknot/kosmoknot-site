@@ -14,6 +14,7 @@
     }
 
     .enter{
+      text-align: center;
       color: whitesmoke;
       font-size: 35px;
       width:100px;
@@ -98,12 +99,13 @@
         refractionCube.mapping = THREE.CubeRefractionMapping;
 
 
-        const HomeGeo = new THREE.SphereGeometry( 1, 32, 32 );
+        const HomeGeo = new THREE.SphereGeometry( 2, 32, 32 );
         const HomeMat = new THREE.MeshBasicMaterial( { map: loader.load('/images/icon.png'), side: THREE.DoubleSide } );
         const HomeSphere = new THREE.Mesh( HomeGeo, HomeMat );
         scene.add(HomeSphere)
-        HomeSphere.position.set(-3.5,0,0);
-        HomeSphere.rotation.y = -Math.PI/2;
+        HomeSphere.position.set(-4.5,0,0);
+          // HomeSphere.rotation.y = -Math.PI/4;
+        // HomeSphere.rotation.y = -Math.PI/2;
 
         scene.background = refractionCube;
 
@@ -117,7 +119,7 @@
         const tloader = new THREE.FontLoader();
         tloader.load( '/three/fonts/CF_glitch_City_Regular.json', function ( font ) {
 
-          const color = 0xffffff;
+          const color = 0x000000;
 
           const matDark = new THREE.LineBasicMaterial( {
             color: color,
