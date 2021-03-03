@@ -84,7 +84,7 @@
 
 
       function init() {
-
+        scene = new THREE.Scene();
         //cubemap
         const path = '/images/MilkyWay/dark-s_';
         const format = '.jpg';
@@ -98,11 +98,13 @@
         refractionCube.mapping = THREE.CubeRefractionMapping;
 
 
-        const HomeSphere = new THREE.SphereGeometry( 2.5, 32, 32 );
+        const HomeGeo = new THREE.SphereGeometry( 1, 32, 32 );
         const HomeMat = new THREE.MeshBasicMaterial( { map: loader.load('/images/icon.png'), side: THREE.DoubleSide } );
+        const HomeSphere = new THREE.Mesh( HomeGeo, HomeMat );
+        scene.add(HomeSphere)
+        HomeSphere.position.set(-3.5,0,0);
+        HomeSphere.rotation.y = -Math.PI/2;
 
-
-        scene = new THREE.Scene();
         scene.background = refractionCube;
 
 
