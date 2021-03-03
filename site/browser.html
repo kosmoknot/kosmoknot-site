@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KosmoKnot</title>
-    <link rel="icon" href="./images/icon.png" type="image/icon type">
+    <link rel="icon" href="/images/icon.png" type="image/icon type">
 
-    <script src="./script.js"></script>
+    <script src="/script.js"></script>
     <style media="screen">
     html{
-        cursor: url(./images/point.ico),default;
+        cursor: url(/images/point.ico),default;
         background: black;
     }
 
@@ -26,7 +26,7 @@
       left: 0;
       right: 0;
       margin: auto;
-      background-image: url("./images/pointer.png");
+      background-image: url("/images/pointer.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100px 100px;
@@ -42,7 +42,7 @@
         a:hover, a:active {
           color: white;
           text-decoration: line-through;
-          cursor: url(./images/hand.ico),auto;
+          cursor: url(/images/hand.ico),auto;
         }
         .top{
           color: white;
@@ -68,9 +68,9 @@
 
 
     <script type="module">
-      import * as THREE from './three/three.module.js';
-      import { OrbitControls } from './three/OrbitControls.js';
-      var stuff,quizes,blogs,home,lists,logs;
+      import * as THREE from '/three/three.module.js';
+      import { OrbitControls } from '/three/OrbitControls.js';
+      var puzzles,about,articles,index,projects,logs;
       let camera,renderer, scene, intersects,controls;
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
@@ -86,7 +86,7 @@
       function init() {
 
         //cubemap
-        const path = './images/MilkyWay/dark-s_';
+        const path = '/images/MilkyWay/dark-s_';
         const format = '.jpg';
         const urls = [
           path + 'px' + format, path + 'nx' + format,
@@ -97,8 +97,8 @@
         const refractionCube = new THREE.CubeTextureLoader().load( urls );
         refractionCube.mapping = THREE.CubeRefractionMapping;
 
-        scene = new THREE.Scene();
 
+        // const SphereHome = new THREE.
 
 
         scene = new THREE.Scene();
@@ -112,7 +112,7 @@
         document.body.appendChild( renderer.domElement );
 
         const tloader = new THREE.FontLoader();
-        tloader.load( './three/fonts/CF_glitch_City_Regular.json', function ( font ) {
+        tloader.load( '/three/fonts/CF_glitch_City_Regular.json', function ( font ) {
 
           const color = 0xffffff;
 
@@ -121,16 +121,16 @@
             side: THREE.DoubleSide
           } );
 
-          var message = "STUFF";
+          var message = "PUZZLES";
           var shapes = font.generateShapes( message, 0.4 );
           var geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           var xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          stuff = new THREE.Mesh( geometry, matDark);
-          stuff.position.x = 2.5;
-          stuff.rotation.y = -Math.PI/2;
-          scene.add( stuff );
+          puzzles = new THREE.Mesh( geometry, matDark);
+          puzzles.position.x = 2.5;
+          puzzles.rotation.y = -Math.PI/2;
+          scene.add( puzzles );
 
           message = "HOME";
           shapes = font.generateShapes( message, 0.4 );
@@ -138,32 +138,32 @@
           geometry.computeBoundingBox();
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          home = new THREE.Mesh( geometry, matDark);
-          home.position.x = -2.5;
-          home.rotation.y = Math.PI/2;
-          scene.add( home );
+          index = new THREE.Mesh( geometry, matDark);
+          index.position.x = -2.5;
+          index.rotation.y = Math.PI/2;
+          scene.add( index );
 
-          message = 'QUIZES';
+          message = 'ABOUT';
           shapes = font.generateShapes( message, 0.4 );
           geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          quizes = new THREE.Mesh( geometry, matDark);
-          quizes.position.y = -2.5;
-          quizes.rotation.x = -Math.PI/2;
-          scene.add( quizes );
+          about = new THREE.Mesh( geometry, matDark);
+          about.position.y = -2.5;
+          about.rotation.x = -Math.PI/2;
+          scene.add( about );
 
-          message = 'BLOGS';
+          message = 'ARTICLES';
           shapes = font.generateShapes( message, 0.4 );
           geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          blogs = new THREE.Mesh( geometry, matDark);
-          blogs.position.y = 2.5;
-          blogs.rotation.x = Math.PI/2;
-          scene.add( blogs );
+          articles = new THREE.Mesh( geometry, matDark);
+          articles.position.y = 2.5;
+          articles.rotation.x = Math.PI/2;
+          scene.add( articles );
 
           message = 'LOGS';
           shapes = font.generateShapes( message, 0.4 );
@@ -176,15 +176,15 @@
           logs.rotation.y = -Math.PI;
           scene.add( logs );
 
-          message = 'LISTS';
+          message = 'PROJECTS';
           shapes = font.generateShapes( message, 0.4 );
           geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          lists = new THREE.Mesh( geometry, matDark);
-          lists.position.z = -2.5;
-          scene.add( lists );
+          projects = new THREE.Mesh( geometry, matDark);
+          projects.position.z = -2.5;
+          scene.add( projects );
 
         } );
 
@@ -198,7 +198,7 @@
 
         controls.enableZoom = false;
         controls.autoRotate = true;
-        controls.autoRotateSpeed =2;
+        controls.autoRotateSpeed =0.5;
         window.addEventListener( 'resize', onWindowResize );
         window.addEventListener( 'mousemove', onMouseMove, false );
 
@@ -227,24 +227,24 @@
         renderer.render( scene, camera );
         raycaster.setFromCamera( mouse, camera );
         intersects = raycaster.intersectObjects( scene.children );
-        if (intersects[0].object==home){
-          document.getElementById('launcher').innerHTML ="<a href='./home.html'>Home</a>";
+        if (intersects[0].object==index){
+          document.getElementById('launcher').innerHTML ="<a href='../index.html'>Home</a>";
         }
         else if(intersects[0].object==logs){
           document.getElementById('launcher').innerHTML ="<a href='./logs.html'>Logs</a>";
         }
-        else if(intersects[0].object==blogs){
-          document.getElementById('launcher').innerHTML ="<a href='./blogs.html'>Blogs</a>";
+        else if(intersects[0].object==articles){
+          document.getElementById('launcher').innerHTML ="<a href='./articles.html'>Articles</a>";
         }
-        else if(intersects[0].object==lists){
-          document.getElementById('launcher').innerHTML ="<a href='./lists.html'>Lists</a>";
+        else if(intersects[0].object==projects){
+          document.getElementById('launcher').innerHTML ="<a href='./projects.html'>Projects</a>";
         }
 
-        else if(intersects[0].object==stuff){
-          document.getElementById('launcher').innerHTML ="<a href='./stuff.html'>Stuff</a>";
+        else if(intersects[0].object==puzzles){
+          document.getElementById('launcher').innerHTML ="<a href='./puzzles.html'>Puzzles</a>";
         }
-        else if(intersects[0].object==quizes){
-          document.getElementById('launcher').innerHTML ="<a href='./quizes.html'>Quizes</a>";
+        else if(intersects[0].object==about){
+          document.getElementById('launcher').innerHTML ="<a href='./about.html'>About</a>";
         }
       }
 
