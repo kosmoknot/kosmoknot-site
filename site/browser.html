@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KosmoKnot</title>
+    <link rel="icon" href="./images/icon.png" type="image/icon type">
+
+    <script src="./script.js"></script>
+    <style media="screen">
+    html{
+        cursor: url(./images/point.ico),default;
+        background: black;
+    }
+
+    .enter{
+      color: whitesmoke;
+      font-size: 35px;
+      width:100px;
+      height:100px;
+      text-align: center;
+      line-height: .8em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-image: url("./images/pointer.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100px 100px;
+    }
+      a:link, a:visited {
+          color: white;
+          font-family: 'Montserrat', Arial, sans-serif;
+          text-decoration: none;
+          text-shadow: 1px 5px 5px black;
+          text-shadow: 2 2 5 black;
+        }
+
+        a:hover, a:active {
+          color: white;
+          text-decoration: line-through;
+          cursor: url(./images/hand.ico),auto;
+        }
+        .top{
+          color: white;
+          display: block;
+          border: whitesmoke;
+          border-style: solid;
+          border-width: thick;
+          width: 100%;
+          text-align: center;
+          font-size: 30px;
+          position: absolute;
+        }
+    }
+    </style>
+  </head>
+  <body style="margin: 0;">
+    <p class="top">Drag to Move, Click on Pointer to open</p>
+    <div class="enter">
+      <p id="launcher"> </p>
+    </div>
+    <canvas id="c" style="overflow: hidden;"></canvas>
+
+
+
+    <script type="module">
+      import * as THREE from './three/three.module.js';
+      import { OrbitControls } from './three/OrbitControls.js';
+      var stuff,quizes,blogs,home,lists,logs;
+      let camera,renderer, scene, intersects,controls;
+      const raycaster = new THREE.Raycaster();
+      const mouse = new THREE.Vector2();
+
+
+      init();
+      animate();
+
+
+      var link ='';
+
+
+      function init() {
+
+        //cubemap
+        const path = './images/MilkyWay/dark-s_';
+        const format = '.jpg';
+        const urls = [
+          path + 'px' + format, path + 'nx' + format,
+          path + 'py' + format, path + 'ny' + format,
+          path + 'pz' + format, path + 'nz' + format
+        ];
+
+        const refractionCube = new THREE.CubeTextureLoader().load( urls );
+        refractionCube.mapping = THREE.CubeRefractionMapping;
+
+        scene = new THREE.Scene();
+
+
+
+        scene = new THREE.Scene();
+        scene.background = refractionCube;
+
+
+
+  			camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        renderer = new THREE.WebGLRenderer( { canvas: c } );
+        renderer.setSize( window.innerWidth, window.innerHeight);
+        document.body.appendChild( renderer.domElement );
+
+        const tloader = new THREE.FontLoader();
+        tloader.load( './three/fonts/CF_glitch_City_Regular.json', function ( font ) {
+
+          const color = 0xffffff;
+
+          const matDark = new THREE.LineBasicMaterial( {
+            color: color,
+            side: THREE.DoubleSide
+          } );
+
+          var message = "STUFF";
+          var shapes = font.generateShapes( message, 0.4 );
+          var geometry = new THREE.ShapeGeometry( shapes );
+          geometry.computeBoundingBox();
+          var xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+          geometry.translate( xMid, 0, 0 );
+          stuff = new THREE.Mesh( geometry, matDark);
+          stuff.position.x = 2.5;
+          stuff.rotation.y = -Math.PI/2;
+          scene.add( stuff );
+
+          message = "HOME";
+          shapes = font.generateShapes( message, 0.4 );
+          geometry = new THREE.ShapeGeometry( shapes );
+          geometry.computeBoundingBox();
+          xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+          geometry.translate( xMid, 0, 0 );
+          home = new THREE.Mesh( geometry, matDark);
+          home.position.x = -2.5;
+          home.rotation.y = Math.PI/2;
+          scene.add( home );
+
+          message = 'QUIZES';
+          shapes = font.generateShapes( message, 0.4 );
+          geometry = new THREE.ShapeGeometry( shapes );
+          geometry.computeBoundingBox();
+          xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+          geometry.translate( xMid, 0, 0 );
+          quizes = new THREE.Mesh( geometry, matDark);
+          quizes.position.y = -2.5;
+          quizes.rotation.x = -Math.PI/2;
+          scene.add( quizes );
+
+          message = 'BLOGS';
+          shapes = font.generateShapes( message, 0.4 );
+          geometry = new THREE.ShapeGeometry( shapes );
+          geometry.computeBoundingBox();
+          xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+          geometry.translate( xMid, 0, 0 );
+          blogs = new THREE.Mesh( geometry, matDark);
+          blogs.position.y = 2.5;
+          blogs.rotation.x = Math.PI/2;
+          scene.add( blogs );
+
+          message = 'LOGS';
+          shapes = font.generateShapes( message, 0.4 );
+          geometry = new THREE.ShapeGeometry( shapes );
+          geometry.computeBoundingBox();
+          xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+          geometry.translate( xMid, 0, 0 );
+          logs = new THREE.Mesh( geometry, matDark);
+          logs.position.z = 2.5;
+          logs.rotation.y = -Math.PI;
+          scene.add( logs );
+
+          message = 'LISTS';
+          shapes = font.generateShapes( message, 0.4 );
+          geometry = new THREE.ShapeGeometry( shapes );
+          geometry.computeBoundingBox();
+          xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+          geometry.translate( xMid, 0, 0 );
+          lists = new THREE.Mesh( geometry, matDark);
+          lists.position.z = -2.5;
+          scene.add( lists );
+
+        } );
+
+
+        camera.position.set(2.5,0,0);
+
+        controls = new OrbitControls( camera, renderer.domElement );
+        controls.listenToKeyEvents( window );
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+
+        controls.enableZoom = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed =2;
+        window.addEventListener( 'resize', onWindowResize );
+        window.addEventListener( 'mousemove', onMouseMove, false );
+
+        window.requestAnimationFrame(render);
+
+      }
+
+
+      function animate() {
+				requestAnimationFrame( animate );
+        controls.update();
+        render();
+			}
+
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+      }
+      function onMouseMove( event ) {
+      	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+      	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+      }
+
+      function render() {
+        renderer.render( scene, camera );
+        raycaster.setFromCamera( mouse, camera );
+        intersects = raycaster.intersectObjects( scene.children );
+        if (intersects[0].object==home){
+          document.getElementById('launcher').innerHTML ="<a href='./home.html'>Home</a>";
+        }
+        else if(intersects[0].object==logs){
+          document.getElementById('launcher').innerHTML ="<a href='./logs.html'>Logs</a>";
+        }
+        else if(intersects[0].object==blogs){
+          document.getElementById('launcher').innerHTML ="<a href='./blogs.html'>Blogs</a>";
+        }
+        else if(intersects[0].object==lists){
+          document.getElementById('launcher').innerHTML ="<a href='./lists.html'>Lists</a>";
+        }
+
+        else if(intersects[0].object==stuff){
+          document.getElementById('launcher').innerHTML ="<a href='./stuff.html'>Stuff</a>";
+        }
+        else if(intersects[0].object==quizes){
+          document.getElementById('launcher').innerHTML ="<a href='./quizes.html'>Quizes</a>";
+        }
+      }
+
+    </script>
+
+
+  </body>
+</html>

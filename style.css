@@ -104,6 +104,7 @@ h1{
 .section td a{
   text-decoration: none;
   color: #2bbc8a;
+  font-size: 16px;
 }
 .section td a:hover{
   cursor: url(./images/hand.ico),default;
@@ -126,6 +127,14 @@ h1{
 .section h1 a:hover{
 
   color: white;
+}
+.section h2{
+  font-size: 25px;
+  position: relative;
+  margin-top: 2rem;
+  color: #2bbc8a;
+  display: block;
+  text-align: center;
 }
 
 .browser a{
