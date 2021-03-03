@@ -74,7 +74,7 @@
       let camera,renderer, scene, intersects,controls;
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
-
+      const loader = new THREE.TextureLoader();
 
       init();
       animate();
@@ -98,7 +98,8 @@
         refractionCube.mapping = THREE.CubeRefractionMapping;
 
 
-        // const SphereHome = new THREE.
+        const HomeSphere = new THREE.SphereGeometry( 2.5, 32, 32 );
+        const HomeMat = new THREE.MeshBasicMaterial( { map: loader.load('/images/icon.png'), side: THREE.DoubleSide } );
 
 
         scene = new THREE.Scene();
