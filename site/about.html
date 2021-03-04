@@ -13,7 +13,7 @@
     <div class="head">
       <div>
         <a href="/index.html">
-          <img id="icon" src='/images/icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+          <img id="icon" src='/images/about_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
         </a>
       </div>
       <div>
@@ -23,12 +23,12 @@
           </tr>
           <tr>
             <td><a href="/site/projects.html">|Projects|</a> </td>
-            <td><a href="/site/puzzles.html">|Puzzles|</a></td>
+            <td><a href="/site/articles.html">|Articles|</a> </td>
             <td><a href="/site/resources.html">|Resources|</a></td>
           </tr>
           <tr>
-            <td><a href="/site/articles.html">|Articles|</a> </td>
             <td><a href="/site/logs.html">|Logs|</a> </td>
+            <td><a href="/site/gallary.html">|Gallary|</a></td>
             <td><a href="/site/about.html">|About|</a></td>
           </tr>
           <tr>
@@ -46,6 +46,34 @@
     <h1>About - Under Construction</h1>
     <div class="section">
     </div>
-
+    <footer>
+      <div style="width: 100%;   background-color: #333;">
+        <div class="footer">
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc" alt="Creative Commons License" src="/images/creative_commons.webp" /></a>
+          <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img id="beaker" src="/images/beaker.webp" /></a>
+          <a rel="github" href="https://github.com/kosmoknot"><img id="git"  src="/images/github.webp" /></a>
+          <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
+        </div>
+        <div class="footer_text">
+          <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+        </div>
+    </div>
+  </footer>
 </body>
+<script type="text/javascript">
+function onHover(){
+  let image = document.getElementById('icon');
+  let title = document.getElementById('title_content');
+  image.src = '/images/about_explosion.gif';
+  title.style.color =  '#ffc107';
+}
+
+function onOut(){
+  let image = document.getElementById('icon');
+  let title = document.getElementById('title_content');
+  image.src = '/images/about_icon.png';
+  title.style.color = 'white';
+}
+
+</script>
 </html>

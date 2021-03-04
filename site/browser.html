@@ -140,7 +140,7 @@
         Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/about_icon.png'), side: THREE.DoubleSide } );
         AboutSphere = new THREE.Mesh( Geo, Mat );
         scene.add(AboutSphere)
-        AboutSphere.position.set(0,0,-8);
+        AboutSphere.position.set(0,-8,0);
 
         Geo = new THREE.SphereGeometry( 3, 32, 32 );
         Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/project_icon.png'), side: THREE.DoubleSide } );
