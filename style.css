@@ -127,7 +127,6 @@ h1{
 }
 .section h2{
   font-size: 25px;
-  position: relative;
   margin-top: 2rem;
   color: #2bbc8a;
   display: block;
@@ -182,14 +181,11 @@ h1{
   justify-content: center;
   color: #c9cacc;
   width: 100%;
-  font-size: 15px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #333;
   height: 40px;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 .footer a{
@@ -197,7 +193,19 @@ h1{
   color: #2bbc8a;
 }
 
-.footer ul{
+.footer_text{
+  flex-wrap: nowrap;
+  display: block;
+  font-size: 15px;
   display: flex;
-  list-style: none;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: #c9cacc;
+  width: 100%;
+  background-color: #333;
+  height: 40px;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-top: 8px;
 }
