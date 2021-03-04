@@ -196,7 +196,7 @@ h1{
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 40px;
   align-items: center;
   margin-top: 30px;
@@ -227,7 +227,7 @@ h1{
 }
 
 #cc{
-  width: 50px;
+  width: 175px;
   display: flex;
 }
 
