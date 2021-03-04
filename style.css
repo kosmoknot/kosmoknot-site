@@ -2,9 +2,6 @@ html {
   border-top: 2px solid #c9cacc;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  cursor: url(./images/point.ico),default;
-
-
 }
 body {
 
@@ -48,7 +45,7 @@ h1{
 .head a:hover{
   color: #ffc107;
   text-decoration:line-through;
-  cursor: url(./images/hand.ico),default;
+
 }
 
 .head{
@@ -80,7 +77,7 @@ h1{
 }
 #title a:hover{
   color: #ffc107;
-  cursor: url(./images/hand.ico),default;
+
 
 }
 
@@ -107,7 +104,7 @@ h1{
   font-size: 16px;
 }
 .section td a:hover{
-  cursor: url(./images/hand.ico),default;
+
   color: white;
 }
 .section time{
@@ -122,7 +119,7 @@ h1{
   color: #2bbc8a;
   display: block;
   text-align: left;
-  cursor: url(./images/hand.ico),default;
+
 }
 .section h1 a:hover{
 
@@ -152,7 +149,7 @@ h1{
 
 .browser a:hover {
   background-color: #666;
-  cursor: url(./images/hand.ico),default;
+
   text-decoration: none;
   color: inherit;
 }
@@ -175,5 +172,5 @@ h1{
 }
 .pagination a:hover {
   background-color: #666;
-  cursor: url(./images/hand.ico),default;
+
 }
