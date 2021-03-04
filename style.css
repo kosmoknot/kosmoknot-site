@@ -257,12 +257,12 @@ h1{
   .head{
     display: block;
     font-size: 20px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 97%;
+    margin: 3%;
   }
   .section{
-    width: 100%;
+    width: 97%;
+    margin: 3%;
     overflow: visible;
   }
   .section time{
@@ -276,12 +276,12 @@ h1{
     font-size: 18px;
   }
   .footer{
-    width: 100%
+    width: 97%;
+    margin: 3%;
   }
   .footer_text{
-    width:100%;
+    width: 97%;
+    margin: 3%;
   }
-
-
 
 }
