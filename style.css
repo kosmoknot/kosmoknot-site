@@ -110,7 +110,7 @@ h1{
 
 }
 .section td{
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   vertical-align: middle;
   color: whitesmoke;
@@ -118,14 +118,14 @@ h1{
 .section td a{
   text-decoration: none;
   color: #2bbc8a;
-  font-size: 18px;
+  font-size: 16px;
 }
 .section td a:hover{
 
   color: white;
 }
 .section time{
-  font-size: 18px;
+  font-size: 16px;
   color: #6e6e6e;
   vertical-align: baseline;
 }
@@ -148,7 +148,7 @@ h1{
   margin-top: 2rem;
   color: #2bbc8a;
   display: block;
-  text-align: center;
+  text-align: left;
 }
 
 .browser a{
