@@ -13,7 +13,7 @@
     <div class="head">
       <div>
         <a href="/index.html">
-          <img id="icon" src='/images/icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+          <img id="icon" src='/images/logs_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
         </a>
       </div>
       <div>
@@ -49,4 +49,21 @@
     </div>
 
 </body>
+
+<script type="text/javascript">
+function onHover(){
+  let image = document.getElementById('icon');
+  let title = document.getElementById('title_content');
+  image.src = '/images/log_explosion.gif';
+  title.style.color =  '#ffc107';
+}
+
+function onOut(){
+  let image = document.getElementById('icon');
+  let title = document.getElementById('title_content');
+  image.src = '/images/logs_icon.png';
+  title.style.color = 'white';
+}
+
+</script>
 </html>

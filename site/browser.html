@@ -14,10 +14,8 @@
     }
 
     .enter{
-      text-align: center;
-      color: whitesmoke;
-      font-size: 35px;
-      width:100px;
+      display: flex;
+      width:200px;
       height:100px;
       text-align: center;
       line-height: .8em;
@@ -27,52 +25,84 @@
       left: 0;
       right: 0;
       margin: auto;
-      background-image: url("/images/pointer.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100px 100px;
+
+
+      z-index: 100;
     }
-      a:link, a:visited {
-          color: white;
-          font-family: 'Montserrat', Arial, sans-serif;
+
+        .top{
+          display: block;
+          padding-left: 30px;
+          padding-right: 30px;
+          border: whitesmoke;
+          border-style: solid;
+          border-width: thin;
+          position: absolute;
+          left: 0;
+          right: 0;
+        }
+        #launcher{
+          text-align: center;
+          display: flex;
+          z-index: 1000;
+          border: none;
+          background-color: transparent;
+          color: #2bbc8a;
+          font-size: 35px;
+          width:100px;
+          height:100px;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          background-image: url("/images/pointer.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
           text-decoration: none;
           text-shadow: 1px 5px 5px black;
           text-shadow: 2 2 5 black;
-        }
-
-        a:hover, a:active {
           color: white;
-          text-decoration: line-through;
+          font-family: 'Montserrat', Arial, sans-serif;
+
+        }
+        .enter button:hover {
+          color: white;
+          display: flex;
           cursor: url(/images/hand.ico),auto;
         }
-        .top{
+        #promt{
           color: white;
-          display: block;
-          border: whitesmoke;
-          border-style: solid;
-          border-width: thick;
-          width: 100%;
           text-align: center;
           font-size: 30px;
-          position: absolute;
+        }
+        #c{
+           overflow: hidden;
+           z-index: 0;
+           display: flex;
         }
     }
     </style>
   </head>
   <body style="margin: 0;">
-    <p class="top">Drag to Move, Click on Pointer to open</p>
-    <div class="enter">
-      <p id="launcher"> </p>
+    <div class="top">
+      <p id="promt">Click on the pointer</p>
     </div>
-    <canvas id="c" style="overflow: hidden;"></canvas>
+
+    <div class="enter">
+      <button id="launcher" name="button" onclick=""></button>
+    </div>
+    <canvas id="c"></canvas>
 
 
 
     <script type="module">
       import * as THREE from '/three/three.module.js';
       import { OrbitControls } from '/three/OrbitControls.js';
-      var puzzles,about,articles,index,projects,logs;
+      var gallary,about,articles,index,projects,logs;
       let camera,renderer, scene, intersects,controls;
+      let HomeSphere, ProjectSphere,LogSphere,ArticleSphere,GallarySphere,AboutSphere;
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
       const loader = new THREE.TextureLoader();
@@ -97,18 +127,45 @@
 
         const refractionCube = new THREE.CubeTextureLoader().load( urls );
         refractionCube.mapping = THREE.CubeRefractionMapping;
-
-
-        const HomeGeo = new THREE.SphereGeometry( 2, 32, 32 );
-        const HomeMat = new THREE.MeshBasicMaterial( { map: loader.load('/images/icon.png'), side: THREE.DoubleSide } );
-        const HomeSphere = new THREE.Mesh( HomeGeo, HomeMat );
-        scene.add(HomeSphere)
-        HomeSphere.position.set(-4.5,0,0);
-          // HomeSphere.rotation.y = -Math.PI/4;
-        // HomeSphere.rotation.y = -Math.PI/2;
-
         scene.background = refractionCube;
 
+
+        var Geo = new THREE.SphereGeometry( 2, 32, 32 );
+        var Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/icon.png'), side: THREE.DoubleSide } );
+        HomeSphere = new THREE.Mesh( Geo, Mat );
+        scene.add(HomeSphere)
+        HomeSphere.position.set(-7,0,0);
+
+        Geo = new THREE.SphereGeometry( 3, 32, 32 );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/about_icon.png'), side: THREE.DoubleSide } );
+        AboutSphere = new THREE.Mesh( Geo, Mat );
+        scene.add(AboutSphere)
+        AboutSphere.position.set(0,0,-8);
+
+        Geo = new THREE.SphereGeometry( 3, 32, 32 );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/project_icon.png'), side: THREE.DoubleSide } );
+        ProjectSphere = new THREE.Mesh( Geo, Mat );
+        scene.add(ProjectSphere)
+        ProjectSphere.position.set(0,0,-8);
+
+        Geo = new THREE.SphereGeometry( 3, 32, 32 );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/gallary_icon.png'), side: THREE.DoubleSide } );
+        GallarySphere =  new THREE.Mesh( Geo, Mat );
+        scene.add(GallarySphere)
+        GallarySphere.position.set(0,7,0);
+
+        Geo = new THREE.SphereGeometry( 1.5, 32, 32 );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/logs_icon.png'), side: THREE.DoubleSide } );
+        LogSphere = new THREE.Mesh( Geo, Mat );
+        scene.add(LogSphere)
+        LogSphere.position.set(0,0,8);
+        LogSphere.rotation.y = Math.PI/2;
+
+        Geo = new THREE.SphereGeometry( 3, 32, 32 );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/articles_icon.png'), side: THREE.DoubleSide } );
+        ArticleSphere = new THREE.Mesh( Geo, Mat );
+        scene.add(ArticleSphere)
+        ArticleSphere.position.set(7,0,0);
 
 
   			camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -126,16 +183,16 @@
             side: THREE.DoubleSide
           } );
 
-          var message = "PUZZLES";
+          var message = "GALLARY";
           var shapes = font.generateShapes( message, 0.4 );
           var geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           var xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          puzzles = new THREE.Mesh( geometry, matDark);
-          puzzles.position.x = 2.5;
-          puzzles.rotation.y = -Math.PI/2;
-          scene.add( puzzles );
+          gallary = new THREE.Mesh( geometry, matDark);
+          gallary.position.x = 2.5;
+          gallary.rotation.y = -Math.PI/2;
+          scene.add( gallary );
 
           message = "HOME";
           shapes = font.generateShapes( message, 0.4 );
@@ -144,7 +201,7 @@
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
           index = new THREE.Mesh( geometry, matDark);
-          index.position.x = -2.5;
+          index.position.x = -5;
           index.rotation.y = Math.PI/2;
           scene.add( index );
 
@@ -177,7 +234,7 @@
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
           logs = new THREE.Mesh( geometry, matDark);
-          logs.position.z = 2.5;
+          logs.position.z = 6.5;
           logs.rotation.y = -Math.PI;
           scene.add( logs );
 
@@ -188,7 +245,7 @@
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
           projects = new THREE.Mesh( geometry, matDark);
-          projects.position.z = -2.5;
+          projects.position.z = -5;
           scene.add( projects );
 
         } );
@@ -232,24 +289,30 @@
         renderer.render( scene, camera );
         raycaster.setFromCamera( mouse, camera );
         intersects = raycaster.intersectObjects( scene.children );
-        if (intersects[0].object==index){
-          document.getElementById('launcher').innerHTML ="<a href='../index.html'>Home</a>";
+        if (intersects[0].object==HomeSphere){
+          document.getElementById('launcher').innerHTML ="Home";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/index.html'");
         }
-        else if(intersects[0].object==logs){
-          document.getElementById('launcher').innerHTML ="<a href='./logs.html'>Logs</a>";
+        else if(intersects[0].object==LogSphere){
+          document.getElementById('launcher').innerHTML ="Logs";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/logs.html'");
         }
-        else if(intersects[0].object==articles){
-          document.getElementById('launcher').innerHTML ="<a href='./articles.html'>Articles</a>";
+        else if(intersects[0].object==ArticleSphere){
+          document.getElementById('launcher').innerHTML ="Articles";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/articles.html'");
         }
-        else if(intersects[0].object==projects){
-          document.getElementById('launcher').innerHTML ="<a href='./projects.html'>Projects</a>";
+        else if(intersects[0].object==ProjectSphere){
+          document.getElementById('launcher').innerHTML ="Project";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/Projects.html'");
         }
 
-        else if(intersects[0].object==puzzles){
-          document.getElementById('launcher').innerHTML ="<a href='./puzzles.html'>Puzzles</a>";
+        else if(intersects[0].object==GallarySphere){
+          document.getElementById('launcher').innerHTML ="Gallary";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/gallary.html'");
         }
-        else if(intersects[0].object==about){
-          document.getElementById('launcher').innerHTML ="<a href='./about.html'>About</a>";
+        else if(intersects[0].object==AboutSphere){
+          document.getElementById('launcher').innerHTML ="About";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/about.html'");
         }
       }
 
