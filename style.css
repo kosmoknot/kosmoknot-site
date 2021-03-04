@@ -182,8 +182,7 @@ h1{
   flex-flow: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  color: #c9cacc;
-  background-color: #333;
+
   height: 40px;
   align-items: center;
   margin-top: 30px;
@@ -207,9 +206,32 @@ h1{
   justify-content: center;
   color: #c9cacc;
   width: 650px;
-  background-color: #333;
+
   height: 40px;
   align-items: center;
   margin-bottom: 15px;
   padding-top: 8px;
+}
+
+#cc{
+  width: 50px;
+  display: flex;
+}
+
+#beaker{
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 3px
+}
+
+#git{
+  width: 36px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#neo{
+   width: 47px;
+   margin-top: 12px;
+   margin-left: 12px;
 }
