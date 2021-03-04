@@ -9,7 +9,6 @@ body {
 
   color: #c9cacc;
   background-color: #1d1f21;
-  font-size: 14px;
   font-family: "Menlo", "Meslo LG", monospace;
   font-weight: 400;
   line-height: 1.725;
@@ -58,7 +57,23 @@ h1{
   width: 650px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 15px;
 }
+
+.head_col{
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.head_row{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
 
 
 #icon{
@@ -68,22 +83,14 @@ h1{
   margin-top: 10px;
 }
 
-#title{
-  font-size: 50px;
-  padding: 0px;
-  margin: 0px;
-  color: white;
-}
 #title a{
+  text-decoration: none;
   font-size: 50px;
   color: white;
-  text-decoration: none;
   text-align: center;
 }
 #title a:hover{
   color: #ffc107;
-
-
 }
 
 .section{
@@ -96,9 +103,12 @@ h1{
 }
 .section table{
   margin-left: 25px;
+  width: 100%;
+  padding-bottom: 15px;
+
 }
 .section td{
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
   vertical-align: middle;
   color: whitesmoke;
@@ -106,15 +116,16 @@ h1{
 .section td a{
   text-decoration: none;
   color: #2bbc8a;
-  font-size: 16px;
+  font-size: 18px;
 }
 .section td a:hover{
 
   color: white;
 }
 .section time{
-  font-size: 15px;
+  font-size: 18px;
   color: #6e6e6e;
+  vertical-align: baseline;
 }
 .section h1 a{
   text-decoration: none;
@@ -141,10 +152,7 @@ h1{
 .browser a{
   text-align: center;
   color: #c9cacc;
-  width: 100%;
   font-size: 16px;
-  margin-left: auto;
-  margin-right: auto;
   text-decoration: none;
   background-color: #333;
   padding: 4px 4px;
@@ -187,7 +195,6 @@ h1{
   flex-flow: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-
   height: 40px;
   align-items: center;
   margin-top: 30px;
@@ -211,7 +218,6 @@ h1{
   justify-content: center;
   color: #c9cacc;
   width: 650px;
-
   height: 40px;
   align-items: center;
   margin-bottom: 15px;
@@ -239,4 +245,43 @@ h1{
    width: 47px;
    margin-top: 12px;
    margin-left: 12px;
+}
+
+@media screen and (max-width: 650px){
+
+  .head_row{
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .head{
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section{
+    width: 100%;
+    overflow: visible;
+  }
+  .section time{
+    font-size: 18px;
+
+  }
+  .section td{
+    font-size: 18px;
+  }
+  .section td a{
+    font-size: 18px;
+  }
+  .footer{
+    width: 100%
+  }
+  .footer_text{
+    width:100%;
+  }
+
+
+
 }
