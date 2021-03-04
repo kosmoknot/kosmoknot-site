@@ -14,9 +14,8 @@
     }
 
     .enter{
-      display: flex;
-      width:200px;
-      height:100px;
+      width:0px;
+      height:0px;
       text-align: center;
       line-height: .8em;
       position: absolute;
@@ -29,7 +28,6 @@
 
       z-index: 100;
     }
-
         .top{
           display: block;
           padding-left: 30px;
@@ -43,34 +41,24 @@
         }
         #launcher{
           text-align: center;
-          display: flex;
-          z-index: 1000;
+          display: block;
           border: none;
           background-color: transparent;
-          color: #2bbc8a;
+          color: white;
           font-size: 35px;
-          width:100px;
+          width:150px;
           height:100px;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
           background-image: url("/images/pointer.png");
           background-position: center;
           background-repeat: no-repeat;
           background-size: 100px 100px;
-          text-decoration: none;
           text-shadow: 1px 5px 5px black;
           text-shadow: 2 2 5 black;
-          color: white;
           font-family: 'Montserrat', Arial, sans-serif;
 
         }
         .enter button:hover {
-          color: white;
-          display: flex;
-          cursor: url(/images/hand.ico),auto;
+        cursor: url(/images/hand.ico),auto;
         }
         #promt{
           color: white;
@@ -80,7 +68,7 @@
         #c{
            overflow: hidden;
            z-index: 0;
-           display: flex;
+           display: block;
         }
     }
     </style>
@@ -141,9 +129,10 @@
         AboutSphere = new THREE.Mesh( Geo, Mat );
         scene.add(AboutSphere)
         AboutSphere.position.set(0,-8,0);
+        AboutSphere.rotation.z = Math.PI/2.5;
 
         Geo = new THREE.SphereGeometry( 3, 32, 32 );
-        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/project_icon.png'), side: THREE.DoubleSide } );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/projects_icon.png'), side: THREE.DoubleSide } );
         ProjectSphere = new THREE.Mesh( Geo, Mat );
         scene.add(ProjectSphere)
         ProjectSphere.position.set(0,0,-8);
@@ -155,7 +144,7 @@
         GallarySphere.position.set(0,7,0);
 
         Geo = new THREE.SphereGeometry( 1.5, 32, 32 );
-        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/logs_icon.png'), side: THREE.DoubleSide } );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/logs_icon.gif'), side: THREE.DoubleSide } );
         LogSphere = new THREE.Mesh( Geo, Mat );
         scene.add(LogSphere)
         LogSphere.position.set(0,0,8);
@@ -212,7 +201,7 @@
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
           about = new THREE.Mesh( geometry, matDark);
-          about.position.y = -2.5;
+          about.position.y = -5;
           about.rotation.x = -Math.PI/2;
           scene.add( about );
 
