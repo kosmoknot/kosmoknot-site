@@ -175,12 +175,14 @@ h1{
 }
 
 .footer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   color: #c9cacc;
-  width: 100%;
   background-color: #333;
   height: 40px;
   align-items: center;
@@ -194,6 +196,8 @@ h1{
 }
 
 .footer_text{
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: nowrap;
   display: block;
   font-size: 15px;
@@ -202,7 +206,7 @@ h1{
   flex-wrap: nowrap;
   justify-content: center;
   color: #c9cacc;
-  width: 100%;
+  width: 650px;
   background-color: #333;
   height: 40px;
   align-items: center;
