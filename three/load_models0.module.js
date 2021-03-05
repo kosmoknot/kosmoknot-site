@@ -3,22 +3,23 @@ import { DDSLoader } from '/three/DDSLoader.js';
 import { MTLLoader } from '/three/MTLLoader.js';
 import { OBJLoader } from '/three/OBJLoader.js';
 import { OrbitControls } from '/three/OrbitControls.js';
-let camera, scene, renderer, controls;
+let camera, scene, controls;
 
 
-function load(id,path,name,cx,cy,cz,ox,oy,oz){
+function load(renderer,path,name,cx,cy,cz,ox,oy,oz){
   var name_obj = name+'.obj'
   var name_mtl = name+'.mtl'
-  init(id,path,name_obj,name_mtl,cx,cy,cz,ox,oy,oz);
-  animate();
+  init(renderer,path,name_obj,name_mtl,cx,cy,cz,ox,oy,oz);
+  animate(renderer);
+
 }
 
 
-function init(id,path,name_obj,name_mtl,cx,cy,cz,ox,oy,oz) {
+function init(renderer,path,name_obj,name_mtl,cx,cy,cz,ox,oy,oz) {
 
-  const canvas = document.querySelector(id);
-  renderer = new THREE.WebGLRenderer({canvas});
+
   renderer.setPixelRatio( window.devicePixelRatio*2 );
+
 
   camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
   camera.position.set(-0.8,-0.8,-0.8);
@@ -76,13 +77,5 @@ function onWindowResize() {
 }
 
 
-
-
-function animate() {
-
-  requestAnimationFrame( animate );
-  renderer.render( scene, camera );
-
-}
 
 export {load};
