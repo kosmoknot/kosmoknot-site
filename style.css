@@ -100,6 +100,7 @@ h1{
   margin-right: auto;
   text-align: left;
   margin-top: 30px;
+  font-size: 15px
 }
 .section table{
   margin-left: 25px;
@@ -111,7 +112,7 @@ h1{
 }
 .section td{
   font-size: 16px;
-  text-align: left;
+  text-align:justify;
   vertical-align: middle;
   color: whitesmoke;
 }
@@ -138,6 +139,11 @@ h1{
   display: block;
   text-align: left;
 
+}
+
+.section b{
+  color: #2bbc8a;
+  font-size: 15px
 }
 .section h1 a:hover{
 
