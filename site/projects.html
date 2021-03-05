@@ -8,6 +8,16 @@
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <script src="/script.js"></script>
+
+    <script type="module">
+
+        import {load} from "/three/load_models.module.js";
+
+        load ('#mirror_assembly','/images/projects/','mirror_assembly',-0.8,-0.8,-0.8,0,0,0);
+
+    </script>
+
+
   </head>
   <body>
     <div class="head">
@@ -40,11 +50,12 @@
     <br>
 
     <h1>Projects</h1>
-    <div class="section">
+
+    <div class="section" style="width:70%;">
       <h2 id='p1'>CFRP mirror for space application</h2>
       <p>
         <b>Summary:</b><br>Optimized CFRP honeycomb parameters using modal and structural analysis in ANSYS. Manufactured and assembled a composite CFRP mirror. Optimized Mirror Fixation Device (MFD) parameters using Zernike analysis in MATLAB.
-        <br><br>
+          <canvas id="mirror_assembly"></canvas>
         This project was divided into 2 parts:
         <ul>
           <li><b>Prototyping of a composite mirror and optimisation of MFD:</b><br>
@@ -52,27 +63,27 @@
             <b>Details:</b>This part focused on designing and prototyping a CFRP honeycomb mirror with an aluminum active surface. The designing and prototyping were done for a 340 mm diameter due to time constraints while the MFD design was carried out for a 690 mm diameter mirror. The prototype mirror with a honeycomb core was fabricated using predefined design conditions. Another part focused on the analysis of MFDs for a 690 mm diameter mirror with a triangular honeycomb core. This was done using the ANSYS ACP module. Directional deformations on the mirror active surface were calculated in the ANSYS, which were used to calculate Zernike polynomial coefficients. These coefficients were then optimized.
           </li>
           <figure>
-            <img src="/images/projects/FE-model.png" style="width:70%">
+            <img src="/images/projects/FE-model.png" style="width:50%">
             <figcaption>Fig.1 - FE model for the composite mirror.</figcaption>
           </figure>
           <figure>
-            <img src="/images/projects/dd-z.png" style="width:70%">
+            <img src="/images/projects/dd-z.png" style="width:50%">
             <figcaption>Fig.2 - Directional deformations for 1g load in z direction for the composite mirror.</figcaption>
           </figure>
           <figure>
-            <img src="/images/projects/vb.png" style="width:70%">
+            <img src="/images/projects/vb.png" style="width:50%">
             <figcaption>Fig.3 - Honeycomb is being vacuum bagged.</figcaption>
           </figure>
           <figure>
-            <img src="/images/projects/hc.png" style="width:70%">
+            <img src="/images/projects/hc.png" style="width:50%">
             <figcaption>Fig.4 - Honeycomb machined into circular shape (before attaching top surface).</figcaption>
           </figure>
           <figure>
-            <img src="/images/projects/inserts.png" style="width:70%">
+            <img src="/images/projects/inserts.png" style="width:50%">
             <figcaption>Fig.5 - Inserts are being machined to achieve planarity during surface finishing.</figcaption>
           </figure>
           <figure>
-            <img src="/images/projects/finished.png" style="width:70%">
+            <img src="/images/projects/finished.png" style="width:50%">
             <figcaption>Fig.6 - Finished prototype (Plano-convex aluminum plate is bonded to the CFRP sandwich pannel).</figcaption>
           </figure>
           <br>
@@ -81,8 +92,25 @@
             <b>Details: </b>During course of the project, we reviewed about various research papers where main objective was of replacing Zerodur with composite mirror which have high stiffness and good thermal stability and how to enhance the various material properties of composite mirror. Based on reviewed research papers we set our objectives to be optimization of the CFRP honeycomb sandwich parameters(cell size, and height) to maximize first natural frequency and minimize top surface deformation. We have completed the ANSYS analysis to study influence of cell size and height to optimize honeycomb performance. We accordingly prepared the mould of hexagonal honeycomb structure and carried out initial prototyping.
           </li>
         </ul>
+        <figure>
+          <img src="/images/projects/modeshape1.png" style="width:50%">
+          <figcaption>Fig.7 - Mode shape of first natural frequency for the CFRP honeycomb.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/projects/mould1.png" style="width:50%">
+          <figcaption>Fig.8 - Mould prepared for hand layup method using wire-EDM</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/projects/mould2.png" style="width:50%">
+          <figcaption>Fig.9 - mould prepared for vacuum assisted resin transfer molding using wire-EDM. </figcaption>
+        </figure>
+        <figure>
+          <img src="/images/projects/vam.png" style="width:50%">
+          <figcaption>Fig.10 - Vacuum assisted resin transfer molding setup.</figcaption>
+        </figure>
       </p>
       <h2 id='p2'>Ergonomic crutches</h2>
+      <canvas id="inter_iit"></canvas>
       <p>Designed a retrofittable attachment with smart locking mechanism to improve user comfort and provide additional body movements.</p>
       <h2 id='p3'>MATLAB app to design gears</h2>
       <p>Built a MATLAB app which gave gear design parameters, and material preferences as outputs for the input operating conditions.</p>
@@ -105,20 +133,4 @@
     </div>
   </footer>
 </body>
-<script type="text/javascript">
-function onHover(){
-  let image = document.getElementById('icon');
-  let title = document.getElementById('title_content');
-  image.src = '/images/projects_explosion.gif';
-  title.style.color =  '#ffc107';
-}
-
-function onOut(){
-  let image = document.getElementById('icon');
-  let title = document.getElementById('title_content');
-  image.src = '/images/projects_icon.png';
-  title.style.color = 'white';
-}
-
-</script>
 </html>

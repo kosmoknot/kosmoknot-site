@@ -157,6 +157,7 @@ h1{
   text-align: left;
 }
 
+
 .browser a{
   text-align: center;
   color: #c9cacc;
@@ -253,6 +254,16 @@ h1{
    width: 47px;
    margin-top: 12px;
    margin-left: 12px;
+}
+
+#c{
+  display: block;
+  width:500px;
+  height:500px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom: 10px;
+  margin-top:10px;
 }
 
 @media screen and (max-width: 650px){
