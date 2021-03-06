@@ -163,7 +163,12 @@ h1{
   text-align: left;
 }
 
-
+.section canvas{
+  width: 600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .browser a{
   text-align: center;
   color: #c9cacc;
@@ -307,11 +312,13 @@ h1{
     margin-left: auto;
     margin-right: auto;
   }
-  #mirror_assembly{
-    width: 400px;
+  .section canvas{
+    width: 97%;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .footer{
     width: 97%;
     margin-left: auto;
