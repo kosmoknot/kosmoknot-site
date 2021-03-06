@@ -307,10 +307,10 @@ h1{
     margin-left: auto;
     margin-right: auto;
   }
-  .section canvas{
-    width: 97%;
+  #mirror_assembly{
+    width: 400px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
   }
   .footer{
     width: 97%;

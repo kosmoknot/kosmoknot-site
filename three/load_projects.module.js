@@ -18,7 +18,7 @@ function init1() {
   canvas = document.querySelector('#mirror_assembly');
   renderer1 = new THREE.WebGLRenderer({canvas});
   renderer1.setPixelRatio( window.devicePixelRatio*2 );
-  renderer1.setSize(canvas.width,canvas.height,true)
+
 
   camera1 = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
   camera1.position.set(-0.8,-0.8,-0.8);
@@ -78,7 +78,7 @@ function init2() {
   canvas = document.querySelector('#inter_iit');
   renderer2 = new THREE.WebGLRenderer({canvas});
   renderer2.setPixelRatio( window.devicePixelRatio*2 );
-  renderer2.setSize(canvas.width,canvas.height,true)
+
 
   camera2 = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
   camera2.position.set(-800,-800,-800);
@@ -131,11 +131,11 @@ function animate2() {
 }
 
 function onWindowResize() {
-  renderer1.setSize(canvas.width,canvas.height,true)
+
   camera1.aspect = window.innerWidth / window.innerHeight;
   camera1.updateProjectionMatrix();
 
-  renderer2.setSize(canvas.width,canvas.height,true)
+
   camera2.aspect = window.innerWidth / window.innerHeight;
   camera2.updateProjectionMatrix();
 
