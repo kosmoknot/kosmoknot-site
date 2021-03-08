@@ -120,19 +120,20 @@ h1{
   color: #2bbc8a;
   font-size: 18px;
 }
-.section h3 a{
+.about a{
   text-decoration: underline;
   font-size: 20px;
   color: whitesmoke;
   text-align: left;
 }
-.section h3 {
+.about {
   font-size: 20px;
   position: relative;
   margin-top: 2rem;
   color: whitesmoke;
   display: block;
   text-align: left;
+  text-decoration: none;
 }
 .section td a:hover{
   color: white;
@@ -168,7 +169,7 @@ h1{
 
 .section b{
   color: #2bbc8a;
-  font-size: 15px
+  font-size: 18px
 }
 .section h1 a:hover{
 
@@ -331,6 +332,9 @@ h1{
   }
 
   .section td a{
+    font-size: 16px;
+  }
+  .section b{
     font-size: 16px;
   }
   .section img{

@@ -144,7 +144,7 @@
         GallarySphere.position.set(0,7,0);
 
         Geo = new THREE.SphereGeometry( 1.5, 32, 32 );
-        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/logs_icon.gif'), side: THREE.DoubleSide } );
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/logs_icon.png'), side: THREE.DoubleSide } );
         LogSphere = new THREE.Mesh( Geo, Mat );
         scene.add(LogSphere)
         LogSphere.position.set(0,0,8);
