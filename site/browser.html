@@ -88,9 +88,9 @@
     <script type="module">
       import * as THREE from '/three/three.module.js';
       import { OrbitControls } from '/three/OrbitControls.js';
-      var gallary,about,articles,index,projects,logs;
+      var gallary,resources,articles,index,projects,logs;
       let camera,renderer, scene, intersects,controls;
-      let HomeSphere, ProjectSphere,LogSphere,ArticleSphere,GallarySphere,AboutSphere;
+      let HomeSphere, ProjectSphere,LogSphere,ArticleSphere,GallarySphere,ResourcesSphere;
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
       const loader = new THREE.TextureLoader();
@@ -125,11 +125,11 @@
         HomeSphere.position.set(-7,0,0);
 
         Geo = new THREE.SphereGeometry( 3, 32, 32 );
-        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/about_icon.png'), side: THREE.DoubleSide } );
-        AboutSphere = new THREE.Mesh( Geo, Mat );
-        scene.add(AboutSphere)
-        AboutSphere.position.set(0,-8,0);
-        AboutSphere.rotation.z = Math.PI/2.5;
+        Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/resources_icon.png'), side: THREE.DoubleSide } );
+        ResourcesSphere = new THREE.Mesh( Geo, Mat );
+        scene.add(ResourcesSphere)
+        ResourcesSphere.position.set(0,-8,0);
+        ResourcesSphere.rotation.z = Math.PI/2.5;
 
         Geo = new THREE.SphereGeometry( 3, 32, 32 );
         Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/projects_icon.png'), side: THREE.DoubleSide } );
@@ -141,7 +141,8 @@
         Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/gallary_icon.png'), side: THREE.DoubleSide } );
         GallarySphere =  new THREE.Mesh( Geo, Mat );
         scene.add(GallarySphere)
-        GallarySphere.position.set(0,7,0);
+        GallarySphere.position.set(0,11,0);
+        GallarySphere.rotation.z = -Math.PI/2;
 
         Geo = new THREE.SphereGeometry( 1.5, 32, 32 );
         Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/logs_icon.png'), side: THREE.DoubleSide } );
@@ -195,19 +196,19 @@
           index.rotation.y = Math.PI/2;
           scene.add( index );
 
-          message = 'ABOUT';
+          message = 'RESOURCES';
           shapes = font.generateShapes( message, 0.4 );
           geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
-          about = new THREE.Mesh( geometry, matDark);
-          about.position.y = -5;
-          about.rotation.x = -Math.PI/2;
-          scene.add( about );
+          resources = new THREE.Mesh( geometry, matDark);
+          resources.position.y = -5;
+          resources.rotation.x = -Math.PI/2;
+          scene.add( resources );
 
           message = 'ARTICLES';
-          shapes = font.generateShapes( message, 0.4 );
+          shapes = font.generateShapes( message, 0.6 );
           geometry = new THREE.ShapeGeometry( shapes );
           geometry.computeBoundingBox();
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
@@ -300,9 +301,9 @@
           document.getElementById('launcher').innerHTML ="Gallary";
           document.getElementById('launcher').setAttribute('onclick',"location.href='/site/gallary.html'");
         }
-        else if(intersects[0].object==AboutSphere){
-          document.getElementById('launcher').innerHTML ="About";
-          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/about.html'");
+        else if(intersects[0].object==ResourcesSphere){
+          document.getElementById('launcher').innerHTML ="Resources";
+          document.getElementById('launcher').setAttribute('onclick',"location.href='/site/resources.html'");
         }
       }
 

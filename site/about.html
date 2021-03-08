@@ -5,7 +5,7 @@
     <meta name="description" content="Personal Website of KosmoKnot">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>KosmoKnot - about</title>
-    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <link rel="icon" href="/images/icon.png" type="image/icon type">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <script src="/script.js"></script>
   </head>
@@ -13,7 +13,7 @@
     <div class="head">
       <div class="head_col">
         <a href="/index.html">
-          <img id="icon" src='/images/about_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+          <img id="icon" src='/images/logo.png' onmouseover="onHover();" onmouseleave="onOut()" />
         </a>
       </div>
       <div class="head_col">
@@ -72,14 +72,14 @@
 function onHover(){
   let image = document.getElementById('icon');
   let title = document.getElementById('title_content');
-  image.src = '/images/about_explosion.gif';
+  image.src = '/images/logo2.png';
   title.style.color =  '#ffc107';
 }
 
 function onOut(){
   let image = document.getElementById('icon');
   let title = document.getElementById('title_content');
-  image.src = '/images/about_icon.png';
+  image.src = '/images/logo.png';
   title.style.color = 'white';
 }
 
