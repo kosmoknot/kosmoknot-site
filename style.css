@@ -77,8 +77,8 @@ h1{
 
 
 #icon{
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   padding: 5px;
   margin-top: 10px;
 }
@@ -100,7 +100,6 @@ h1{
   margin-right: auto;
   text-align: justify;
   margin-top: 30px;
-  font-size: 15px
 }
 .section table{
   margin-left: 25px;
@@ -111,7 +110,7 @@ h1{
 
 }
 .section td{
-  font-size: 16px;
+  font-size: 18px;
   text-align:justify;
   vertical-align: middle;
   color: whitesmoke;
@@ -119,20 +118,40 @@ h1{
 .section a{
   text-decoration: none;
   color: #2bbc8a;
-  font-size: 16px;
+  font-size: 18px;
+}
+.section h3 a{
+  text-decoration: underline;
+  font-size: 20px;
+  color: whitesmoke;
+  text-align: left;
+}
+.section h3 {
+  font-size: 20px;
+  position: relative;
+  margin-top: 2rem;
+  color: whitesmoke;
+  display: block;
+  text-align: left;
 }
 .section td a:hover{
-
   color: white;
 }
 .section ul{
   list-style: none;
 }
+.section ol a:hover{
+  list-style: none;
+  color: white;
+}
+.section ol{
+  list-style-type: disclosure-closed;
+}
 .section img{
   width: 475px;
 }
 .section time{
-  font-size: 16px;
+  font-size: 18px;
   color: #6e6e6e;
   vertical-align: baseline;
 }
@@ -181,7 +200,6 @@ h1{
 
 .browser a:hover {
   background-color: #666;
-
   text-decoration: none;
   color: inherit;
 }
@@ -190,9 +208,9 @@ h1{
   text-align: center;
   color: #c9cacc;
   width: 97%;
-  font-size: 15px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 35px;
 }
 
 .pagination a {
@@ -201,6 +219,7 @@ h1{
   text-decoration: none;
   border-radius: 5px;
   background-color: #333;
+  font-size: 15px;
 }
 .pagination a:hover {
   background-color: #666;
@@ -245,7 +264,7 @@ h1{
 }
 
 #cc{
-  width: 175px;
+  width: 40px;
   display: flex;
 }
 
@@ -307,14 +326,12 @@ h1{
     overflow: visible;
   }
   .section time{
-    font-size: 18px;
+    font-size: 16px;
 
   }
-  .section td{
-    font-size: 18px;
-  }
+
   .section td a{
-    font-size: 18px;
+    font-size: 16px;
   }
   .section img{
     width: 97%;
