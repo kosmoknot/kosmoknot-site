@@ -16,12 +16,12 @@ function load(id,path,name,cx,cy,cz,ox,oy,oz){
 
 function init(id,path,name_obj,name_mtl,cx,cy,cz,ox,oy,oz) {
 
-  const canvas = document.querySelector(id);
+  const canvas = document.getElementById(id);
   renderer = new THREE.WebGLRenderer({canvas});
   renderer.setPixelRatio( window.devicePixelRatio*2 );
 
   camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-  camera.position.set(-0.8,-0.8,-0.8);
+  camera.position.set(cx,cy,cz);
 
 
   scene = new THREE.Scene();
@@ -55,7 +55,7 @@ function init(id,path,name_obj,name_mtl,cx,cy,cz,ox,oy,oz) {
         .setMaterials( materials )
         .setPath( '/images/projects/' )
         .load( name_obj, function ( object ) {
-          object.position.set(0,0,0);
+          object.position.set(ox,oy,oz);
           scene.add( object );
         }, );
 

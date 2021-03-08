@@ -8,16 +8,26 @@
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <script src="/script.js"></script>
-    <script type="module">
-        import {load} from "/three/load_models.module.js";
-        load ('#display','/images/projects/','mirror_assembly',-0.8,-0.8,-0.8,0,0,0);
+    <script async type="module">
+    import {load} from "/three/load_models.module.js";
+    window.loadModel=loadModel;
+      function loadModel(){
+
+        var name = document.getElementById("models");
+        if(name.value == 'mirror_assembly'){
+          load('models_show','/images/projects/','mirror_assembly',-0.8,-0.8,-0.8,0,0,0);
+        }
+        else{
+          load('models_show','/images/projects/','inter_iit',-800,-800,-800,0,0,0);
+        }
+      }
     </script>
   </head>
   <body>
     <div class="head">
       <div class="head_col">
         <a href="/index.html">
-          <img id="icon" src='/images/gallary_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+          <img id="icon" src='/images/icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
         </a>
       </div>
       <div class="head_col">
@@ -42,14 +52,39 @@
         </div>
       </div>
     <br>
-
-    <h1>Gallary - Under Construction</h1>
-
+    <h1>Gallary</h1>
 
     <div class="section">
         <h2 id="3dm">3D-Models</h2>
+        <form>
+        <label for="models">Choose a model:</label>
+        <select id="models" name="models">
+          <option value="mirror_assembly">Mirror assembly</option>
+          <option value="inter_iit">Ergonomic crutches</option>
+      </select>
+      <button type="button" id="sub_button" name="submit" onclick="loadModel();">Load</button>
+      </form>
     </div>
-
+    <canvas id="models_show"></canvas>
+    <div class="section">
+      <h2>Pixel drawings - Imaginary planetary explosions</h2>
+      <figure>
+        <img src="/images/explosion.gif" style="width:250px">
+        <figcaption>Explosion-1</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/about_explosion.gif" style="width:250px">
+        <figcaption>Explosion-2</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/logs_explosion.gif" style="width:250px">
+        <figcaption>Explosion-3</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/projects_explosion.gif" style="width:250px">
+        <figcaption>Explosion-4</figcaption>
+      </figure>
+    </div>
 
 
 
@@ -72,14 +107,14 @@
 function onHover(){
   let image = document.getElementById('icon');
   let title = document.getElementById('title_content');
-  image.src = '/images/gallary_explosion.gif';
+  image.src = '/images/explosion.gif';
   title.style.color =  '#ffc107';
 }
 
 function onOut(){
   let image = document.getElementById('icon');
   let title = document.getElementById('title_content');
-  image.src = '/images/gallary_icon.png';
+  image.src = '/images/icon.png';
   title.style.color = 'white';
 }
 

@@ -276,6 +276,15 @@ h1{
   margin-bottom: 10px;
   margin-top:10px;
 }
+ #models_show {
+   display: block;
+   width:500px;
+   height:500px;
+   margin-left: auto;
+   margin-right:auto;
+   margin-bottom: 10px;
+   margin-top:10px;
+}
 
 @media screen and (max-width: 650px){
 
