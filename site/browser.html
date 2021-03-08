@@ -150,11 +150,12 @@
         LogSphere.position.set(0,0,8);
         LogSphere.rotation.y = Math.PI/2;
 
-        Geo = new THREE.SphereGeometry( 3, 32, 32 );
+        Geo = new THREE.SphereGeometry( 5, 32, 32 );
         Mat = new THREE.MeshBasicMaterial( { map: loader.load('/images/articles_icon.png'), side: THREE.DoubleSide } );
         ArticleSphere = new THREE.Mesh( Geo, Mat );
         scene.add(ArticleSphere)
-        ArticleSphere.position.set(7,0,0);
+        ArticleSphere.position.set(13,0,0);
+        ArticleSphere.rotation.y = Math.PI/1.5;
 
 
   			camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -179,8 +180,8 @@
           var xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
           gallary = new THREE.Mesh( geometry, matDark);
-          gallary.position.x = 2.5;
-          gallary.rotation.y = -Math.PI/2;
+          gallary.position.y = 8;
+          gallary.rotation.x = Math.PI/2;
           scene.add( gallary );
 
           message = "HOME";
@@ -212,8 +213,8 @@
           xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
           geometry.translate( xMid, 0, 0 );
           articles = new THREE.Mesh( geometry, matDark);
-          articles.position.y = 2.5;
-          articles.rotation.x = Math.PI/2;
+          articles.position.x = 8;
+          articles.rotation.y = -Math.PI/2;
           scene.add( articles );
 
           message = 'LOGS';
