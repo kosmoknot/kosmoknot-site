@@ -94,8 +94,9 @@ h1{
 }
 
 .section{
-  color: white;
+  color: #c9cacc;
   width: 650px;
+  font-size: 18px;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
@@ -113,40 +114,27 @@ h1{
   font-size: 18px;
   text-align:justify;
   vertical-align: middle;
-  color: whitesmoke;
+  color: #c9cacc;
 }
 .section a{
   text-decoration: none;
   color: #2bbc8a;
   font-size: 18px;
 }
-.about a{
-  text-decoration: underline;
-  font-size: 20px;
-  color: whitesmoke;
-  text-align: left;
-}
-.about {
-  font-size: 20px;
-  position: relative;
-  margin-top: 2rem;
-  color: whitesmoke;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-}
+
 .section td a:hover{
-  color: white;
+  color: #c9cacc;
 }
 .section ul{
   list-style: none;
 }
 .section ol a:hover{
   list-style: none;
-  color: white;
+  color: #c9cacc;
 }
 .section ol{
   list-style-type: disclosure-closed;
+  color: #c9cacc;
 }
 .section img{
   width: 475px;
@@ -183,7 +171,7 @@ h1{
 }
 
 .section h1 a:hover{
-  color: white;
+  color: #c9cacc;
 }
 
 .section h2{
@@ -244,18 +232,30 @@ h1{
   flex-wrap: nowrap;
   align-content: flex-start;
   font-size: 16px;
-  color: whitesmoke;
-  text-align: left;
+  color: #c9cacc;
+  text-align: justify;
 }
 
-.article h2{
-
-}
 
 .article a{
   color: inherit;
   text-decoration: underline;
   font-size: inherit;
+}
+.about a{
+  text-decoration: underline;
+  font-size: 20px;
+  color: #c9cacc;
+  text-align: left;
+}
+.about {
+  font-size: 20px;
+  position: relative;
+  margin-top: 2rem;
+  color: #c9cacc;
+  display: block;
+  text-align: left;
+  text-decoration: none;
 }
 .footer{
   margin-left: auto;
