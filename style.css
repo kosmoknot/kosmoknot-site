@@ -263,6 +263,8 @@ h1{
 
 .log ol{
   list-style: decimal;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .collapsible{
@@ -285,17 +287,16 @@ h1{
   background-color: #555;
 }
 
-.log b{
-  font-size: 16px;
-  margin-bottom: 100px;
-  color: #c9cacc;
+.log li{
+
+  margin-bottom: 20px;
+
 }
 
 .collapsible_content{
   display: none;
   text-align: justify;
   font-size: 16px;
-
 }
 
 .footer{
