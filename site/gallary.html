@@ -8,6 +8,7 @@
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <script src="/script.js"></script>
+
     <script async type="module">
     import {load} from "/three/load_models.module.js";
     window.loadModel=loadModel;
@@ -21,6 +22,7 @@
           load('models_show','/images/projects/','inter_iit',-800,-800,-800,0,0,0);
         }
       }
+      
     </script>
   </head>
   <body>
@@ -55,63 +57,69 @@
     <h1>Gallary</h1>
 
     <div class="section">
-        <h2 id="3dm">3D-Models</h2>
-        <form>
-        <label for="models">Choose a model:</label>
-        <select id="models" name="models">
-          <option value="mirror_assembly">Mirror assembly</option>
-          <option value="inter_iit">Ergonomic crutches</option>
-      </select>
-      <button type="button" id="sub_button" name="submit" onclick="loadModel();">Load</button>
-      <p style="font-size:16px;">(Loading might be slow depending on your RAM and netspeed)</p>
-      </form>
-    </div>
 
-    <canvas id="models_show" style="background: gray;"></canvas>
+      <div class="articles">
 
-
-
-    <div class="section" id="pixels">
-      <h2>Pixel drawings - celestial bodies</h2>
-      <figure>
-        <img src="/images/icon.png" style="width:200px">
-        <figcaption>Celestial body-1</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/about_icon.png" style="width:200px">
-        <figcaption>Celestial body-2</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/logs_icon.png" style="width:200px">
-        <figcaption>Celestial body-3</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/projects_icon.png" style="width:200px">
-        <figcaption>Celestial body-4</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/articles_icon.png" style="width:200px">
-        <figcaption>Celestial body-5</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/gallary_icon.png" style="width:200px">
-        <figcaption>Celestial body-6</figcaption>
-      </figure>
-    </div>
-
-
-    <footer>
-      <div style="width: 100%;   background-color: #333;">
-        <div class="footer">
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc" alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
-          <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img id="beaker" src="/images/beaker.webp" /></a>
-          <a rel="github" href="https://github.com/kosmoknot"><img id="git"  src="/images/github.webp" /></a>
-          <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
+        <div class="article">
+          <h2 id="3dm">3D-Models</h2>
+          <form>
+          <label for="models">Choose a model:</label>
+          <select id="models" name="models">
+            <option value="mirror_assembly">Mirror assembly</option>
+            <option value="inter_iit">Ergonomic crutches</option>
+        </select>
+        <button type="button" id="sub_button" name="submit" onclick="loadModel();">Load</button>
+        <p style="font-size:16px;">(Loading might be slow depending on your RAM and netspeed)</p>
+        </form>
+          <canvas id="models_show"></canvas>
         </div>
-        <div class="footer_text">
-          <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+
+
+        <div class="article">
+          <h2 id="pixels">Pixel drawings - celestial bodies</h2>
+          <figure>
+            <img src="/images/icon.png" style="width:200px">
+            <figcaption>Celestial body-1</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/logs_icon.png" style="width:200px">
+            <figcaption>Celestial body-2</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/projects_icon.png" style="width:200px">
+            <figcaption>Celestial body-3</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/articles_icon.png" style="width:200px">
+            <figcaption>Celestial body-4</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/gallary_icon.png" style="width:200px">
+            <figcaption>Celestial body-5</figcaption>
+          </figure>
         </div>
+
+      </div>
+
     </div>
+
+
+
+
+      <footer>
+        <div style="width: 100%;   background-color: #333;">
+          <div class="footer">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc" alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
+            <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img id="beaker" src="/images/beaker.webp" /></a>
+            <a rel="github" href="https://github.com/kosmoknot"><img id="git"  src="/images/github.webp" /></a>
+            <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
+          </div>
+          <div class="footer_text">
+            <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+          </div>
+      </div>
+    </div>
+
   </footer>
 </body>
 <script type="text/javascript">

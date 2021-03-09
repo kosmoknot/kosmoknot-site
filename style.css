@@ -188,6 +188,7 @@ h1{
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+  background: gray;
 }
 
 .browser a{
@@ -259,6 +260,44 @@ h1{
   text-align: left;
   text-decoration: none;
 }
+
+.log ol{
+  list-style: decimal;
+}
+
+.collapsible{
+  padding: 4px 6px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #333;
+  font-size: 15px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  font-size: 16px;
+  color: #c9cacc;
+  text-align: justify;
+  line-height: 27px;
+}
+
+.collapsible:hover{
+  background-color: #555;
+}
+
+.log b{
+  font-size: 16px;
+  margin-bottom: 100px;
+  color: #c9cacc;
+}
+
+.collapsible_content{
+  display: none;
+  text-align: justify;
+  font-size: 16px;
+
+}
+
 .footer{
   margin-left: auto;
   margin-right: auto;
@@ -379,6 +418,7 @@ h1{
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+    background: gray;
   }
 
   .footer{
