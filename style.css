@@ -168,7 +168,7 @@ h1{
 
 .section b{
   color: #2bbc8a;
-  font-size: 18px
+  font-size: 16px
 }
 
 .section h1 a:hover{
@@ -238,7 +238,10 @@ h1{
   text-align: justify;
   word-spacing: 0px;
 }
-
+.article{
+  border: 1px solid #969696;
+  padding:20px;
+}
 
 .article a{
   color: inherit;
@@ -376,6 +379,47 @@ h1{
    margin-right:auto;
    margin-bottom: 10px;
    margin-top:10px;
+}
+
+#answer{
+  visibility: hidden;
+}
+
+#quiz{
+  visibility: hidden;
+}
+
+#show_answer{
+  visibility: hidden;
+}
+
+button{
+  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 16px;
+  text-align: center;
+  color: #c9cacc;
+  background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+select{
+  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 16px;
+  text-align: center;
+  color: #c9cacc;
+  background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  padding: 8px;
+  border-radius: 8px;
+}
+button:hover{
+  background-color: #666;
 }
 
 @media screen and (max-width: 650px){
