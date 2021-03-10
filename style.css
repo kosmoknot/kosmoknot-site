@@ -239,7 +239,8 @@ h1{
   word-spacing: 0px;
 }
 .article{
-  border: 1px solid #969696;
+  border-bottom: 1px solid #969696;
+  border-top: 1px solid #969696;
   padding:20px;
 }
 
