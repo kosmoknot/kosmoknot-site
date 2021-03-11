@@ -1,2 +1,2 @@
 # kosmoknot-site
-second attempt at website building
+A digital garden to curate my projects, writings, resources, and activity logs.
