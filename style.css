@@ -191,6 +191,13 @@ h1{
   background: gray;
 }
 
+.code {
+  font: courier;
+  background-color: #333;
+  padding: 2px;
+  color: #c9cacc;
+}
+
 .browser a{
   text-align: center;
   color: #c9cacc;
