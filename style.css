@@ -73,8 +73,83 @@ h1{
   flex-wrap: nowrap;
   justify-content: space-around;
 }
+.nav{
+  color: #c9cacc;
+  width: 650px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-top: 30px;
+}
 
+.nav a{
+  text-decoration: none;
+  color: #2bbc8a;
+  font-size: 18px;
+}
+.nav h1{
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 2rem;
+  color: #2bbc8a;
+  text-align: left;
+}
 
+.nav h1 a{
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 2rem;
+  color: #2bbc8a;
+  text-align: left;
+}
+
+.nav h1 a:hover{
+  color: #c9cacc;
+}
+
+.nav a:hover{
+  color: #c9cacc;
+}
+.nav_col1{
+  width: 132px;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+}
+.nav_col2{
+  
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+}
+
+.nav_row{
+  margin-bottom: 5px;
+  border-bottom: 0.5px solid #555;
+  border-top: 0.5px solid #555;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.nav_row2{
+  margin-bottom: 5px;
+  border-bottom: 0.5px solid #555;
+  border-top: 0.5px solid #555;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.nav ol a:hover{
+  list-style: none;
+  color: #c9cacc;
+}
+.nav ol{
+  list-style-type: disclosure-closed;
+  color: #c9cacc;
+}
 
 #icon{
   width: 150px;
@@ -129,14 +204,7 @@ h1{
 .section ul{
   list-style: none;
 }
-.section ol a:hover{
-  list-style: none;
-  color: #c9cacc;
-}
-.section ol{
-  list-style-type: disclosure-closed;
-  color: #c9cacc;
-}
+
 .section img{
   width: 475px;
 }
@@ -145,30 +213,27 @@ h1{
   color: #6e6e6e;
   vertical-align: baseline;
 }
-
-.section h1 a{
-  text-decoration: none;
-  font-size: 25px;
-  position: relative;
-  margin-top: 2rem;
+.section b{
   color: #2bbc8a;
-  display: block;
-  text-align: left;
+  font-size: 16px
 }
+
+
 
 .section h1{
   text-decoration: none;
   font-size: 25px;
-  position: relative;
   margin-top: 2rem;
   color: #2bbc8a;
-  display: block;
   text-align: left;
 }
 
-.section b{
+.section h1 a{
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 2rem;
   color: #2bbc8a;
-  font-size: 16px
+  text-align: left;
 }
 
 .section h1 a:hover{
@@ -221,6 +286,7 @@ h1{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 35px;
+  margin-top: 15px;
 }
 
 .pagination a {
@@ -429,6 +495,9 @@ button:hover{
 
 @media screen and (max-width: 650px){
 
+  .about{
+    text-align: center;
+  }
   .head_row{
     flex-flow: column;
 
@@ -447,13 +516,33 @@ button:hover{
     margin-right: auto;
     overflow: visible;
   }
-  .section time{
-    font-size: 16px;
-
+  .nav{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
   }
 
-  .section td a{
+  .nav {
     font-size: 16px;
+  }
+  .nav a{
+    font-size: 16px;
+  }
+  .nav h1 a{
+    font-size: 22px;
+    text-align: center;
+  }
+  .nav_row{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .nav_row2{
+    justify-content: left;
+    
+  }
+  .pagination a{
+    font-size: 14px;
   }
   .section b{
     font-size: 16px;
@@ -470,6 +559,7 @@ button:hover{
     margin-right: auto;
     background: gray;
   }
+
 
   .footer{
     width: 97%;
