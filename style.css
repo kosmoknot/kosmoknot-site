@@ -124,9 +124,8 @@ h1{
 }
 
 .nav_row{
-  margin-bottom: 5px;
-  border-bottom: 0.5px solid #555;
-  border-top: 0.5px solid #555;
+  margin-bottom: 2px;
+
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -536,6 +535,8 @@ button:hover{
     text-align: center;
   }
   .nav_row{
+    border-bottom: 0.5px solid #555;
+    border-top: 0.5px solid #555;
     flex-direction: column;
     flex-wrap: nowrap;
   }
