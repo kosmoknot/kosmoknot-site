@@ -213,7 +213,6 @@ h1{
 }
 .section b{
   color: #2bbc8a;
-  font-size: 16px
 }
 
 
@@ -253,7 +252,10 @@ h1{
   margin-right: auto;
   background: gray;
 }
-
+.section ol{
+  list-style-type: disclosure-closed;
+  color: #c9cacc;
+}
 .code {
   font: courier;
   background-color: #333;
