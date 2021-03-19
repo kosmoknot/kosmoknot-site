@@ -148,6 +148,11 @@ h1{
   list-style-type: disclosure-closed;
   color: #c9cacc;
 }
+.nav time{
+  font-size: 18px;
+  color: #6e6e6e;
+  vertical-align: baseline;
+}
 
 #icon{
   width: 150px;
@@ -207,7 +212,7 @@ h1{
   width: 475px;
 }
 .section time{
-  font-size: 18px;
+  font-size: 16px;
   color: #6e6e6e;
   vertical-align: baseline;
 }
