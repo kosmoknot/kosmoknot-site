@@ -148,7 +148,7 @@ h1{
   list-style-type: disclosure-closed;
   color: #c9cacc;
 }
-.nav time{
+.nav .nav_row .nav_col1 time{
   font-size: 18px;
   color: #6e6e6e;
   vertical-align: baseline;
