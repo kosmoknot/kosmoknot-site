@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal Website of KosmoKnot">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>KosmoKnot</title>
-    <link rel="icon" href="/images/logo.png" type="image/icon type">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <script src="/three/quizes.js"></script>
-  </head>
-  <body>
-    <div class="head">
-      <div class="head_col">
-        <a href="/index.html">
-          <img id="icon" src='/images/icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
-        </a>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Personal Website of KosmoKnot">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>KosmoKnot</title>
+  <link rel="icon" href="/images/logo.png" type="image/icon type">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <script src="/three/quizes.js"></script>
+</head>
+
+<body>
+  <div class="head">
+    <div class="head_col">
+      <a href="/index.html">
+        <img id="icon" src='/images/icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+      </a>
+    </div>
+    <div class="head_col">
+      <div class="head_row">
+        <p id="title" onmouseover="onHover();" onmouseleave="onOut()"><a id='title_content'
+            href="/index.html">KosmoKnot</a></p>
       </div>
-      <div class="head_col">
-          <div class="head_row">
-            <p id="title" onmouseover="onHover();" onmouseleave="onOut()"><a id='title_content' href="/index.html">KosmoKnot</a></p>
-          </div>
-          <div class="head_row">
-            <a href="/site/projects.html">|Projects|</a>
-            <a href="/site/articles.html">|Articles|</a>
-            <a href="/site/resources.html">|Resources|</a>
-          </div>
-          <div class="head_row">
-            <a href="/site/logs.html">|Logs|</a>
-            <a href="/site/gallary.html">|Gallary|</a>
-            <a href="/site/about.html">|About|</a>
-          </div>
-          <div class="head_row">
-              <div class="browser" style="padding-top:10px">
-              <a href="/site/browser.html">Open 3D Navigator</a>
-              </div>
-          </div>
-        </div>
+      <div class="head_row">
+        <a href="/site/projects.html">|Projects|</a>
+        <a href="/site/articles.html">|Articles|</a>
+        <a href="/site/resources.html">|Resources|</a>
       </div>
-
-
-
-      <div class="section" style="text-align:center;border: 1px solid #969696; padding:10px;">
-        <div>
-          Select a Quiz:
-          <select class="choose_content" name="quiz" id="quiz_name">
-            <option value="Astronomy Quiz">Astronomy</option>
-            <option value="Sci-Tech Quiz">Sci-Tech</option>
-            <option value="General Quiz">General</option>
-          </select> <br> <br>
-          <button class="button_submit" onclick="reset();generateQuiz();">Go!</button>
-        </div>
-        <div id="quiz">
-          <p id="qz_name"></p>
-          <div class="question" >
-            <p class="sub_mid" id="question_no">0</p>
-            <p class="sub_left" id="question_name" style="text-align: justify;">Question here</p>
-            <img id="question_image" style= "width:100%" src="">
-          <button class="button_submit" id= 'show_answer' onclick="showAnswer()">Show Answer</button>
-          <div id="answer">
-            <p id="answer_name">dummy answer</p>
-          </div>
-          <div class="sub_mid">
-            <button class="button_submit" id= 'back' onclick="backQst()">back</button> <button class="button_submit" id= 'next' onclick="nextQst()">Next</button>
-          </div>
+      <div class="head_row">
+        <a href="/site/logs.html">|Logs|</a>
+        <a href="/site/gallary.html">|Gallary|</a>
+        <a href="/site/about.html">|About|</a>
+      </div>
+      <div class="head_row">
+        <div class="browser" style="padding-top:10px">
+          <a href="/site/browser.html">Open 3D Navigator</a>
         </div>
       </div>
     </div>
-      <footer>
-        <div style="width: 100%; background-color: #333;">
-          <div class="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc" alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
-            <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img id="beaker" src="/images/beaker.webp" /></a>
-            <a rel="github" href="https://github.com/kosmoknot"><img id="git"  src="/images/github.webp" /></a>
-            <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
-          </div>
-          <div class="footer_text">
-            <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
-          </div>
+  </div>
+
+
+
+  <div class="section" style="text-align:center;border: 1px solid #969696; padding:10px;">
+    <div>
+      Select a Quiz:
+      <select class="choose_content" name="quiz" id="quiz_name">
+        <option value="Astronomy Quiz">Astronomy</option>
+        <option value="Sci-Tech Quiz">Sci-Tech</option>
+        <option value="General Quiz">General</option>
+      </select> <br> <br>
+      <button class="button_submit" onclick="reset();generateQuiz();">Go!</button>
+    </div>
+    <div id="quiz">
+      <p id="qz_name"></p>
+      <div class="question">
+        <p class="sub_mid" id="question_no">0</p>
+        <p class="sub_left" id="question_name" style="text-align: justify;">Question here</p>
+        <img id="question_image" style="width:100%" src="">
+        <button class="button_submit" id='show_answer' onclick="showAnswer()">Show Answer</button>
+        <div id="answer">
+          <p id="answer_name">dummy answer</p>
+        </div>
+        <div class="sub_mid">
+          <button class="button_submit" id='back' onclick="backQst()">back</button> <button class="button_submit"
+            id='next' onclick="nextQst()">Next</button>
+        </div>
       </div>
-    </footer>
-  </body>
-  <script type="text/javascript">
-  function onHover(){
+    </div>
+  </div>
+  <footer>
+    <div style="width: 100%; background-color: #333;">
+      <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
+            alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
+        <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img
+            id="beaker" src="/images/beaker.webp" /></a>
+        <a rel="github" href="https://github.com/kosmoknot"><img id="git" src="/images/github.webp" /></a>
+        <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
+      </div>
+      <div class="footer_text">
+        <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript">
+  function onHover() {
     let image = document.getElementById('icon');
     let title = document.getElementById('title_content');
     image.src = '/images/explosion.gif';
-    title.style.color =  '#ffc107';
+    title.style.color = '#ffc107';
   }
 
-  function onOut(){
+  function onOut() {
     let image = document.getElementById('icon');
     let title = document.getElementById('title_content');
     image.src = '/images/icon.png';
     title.style.color = 'white';
   }
-  </script>
+</script>
+
 </html>

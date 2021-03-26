@@ -1,184 +1,214 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal Website of KosmoKnot">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>KosmoKnot - projects</title>
-    <link rel="icon" href="/images/logo.png" type="image/icon type">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <script type="module" src="/three/load_projects.module.js"></script>
 
-  </head>
-  <body>
-    <div class="head">
-      <div class="head_col">
-        <a href="/index.html">
-          <img id="icon" src='/images/projects_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
-        </a>
-      </div>
-      <div class="head_col">
-          <div class="head_row">
-            <p id="title" onmouseover="onHover();" onmouseleave="onOut()"><a id='title_content' href="/index.html">KosmoKnot</a></p>
-          </div>
-          <div class="head_row">
-            <a href="/site/projects.html">|Projects|</a>
-            <a href="/site/articles.html">|Articles|</a>
-            <a href="/site/resources.html">|Resources|</a>
-          </div>
-          <div class="head_row">
-            <a href="/site/logs.html">|Logs|</a>
-            <a href="/site/gallary.html">|Gallary|</a>
-            <a href="/site/about.html">|About|</a>
-          </div>
-          <div class="head_row">
-              <div class="browser" style="padding-top:10px">
-              <a href="/site/browser.html">Open 3D Navigator</a>
-              </div>
-          </div>
-        </div>
-      </div>
-    <br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Personal Website of KosmoKnot">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>KosmoKnot - projects</title>
+  <link rel="icon" href="/images/logo.png" type="image/icon type">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <script type="module" src="/three/load_projects.module.js"></script>
 
-    <h1>Projects</h1>
-    <div class="section">
-      <div class="articles">
-        <div class="article">
-            <h2 id='p1'>Ergonomic crutches</h2>
+</head>
 
-            <p>Designed crutches with a retrofittable attachment, and smart locking mechanism to improve user comfort and provide additional body movements.
-              <canvas id="inter_iit"></canvas>
-              <figure>
-                <img src="/images/projects/crutch_parts.png" >
-                <figcaption>Fig.11 - Various parts of ergonomic crutches.</figcaption>
-              </figure>
-              <br>
-              <b>Advantages of these crutches:</b>
-            </p>
-
-            <ul style="list-style-type: disc;">
-              <li>Can easily get up from seated position using hand grip (after the transformation)</li>
-              <li>Can carry items in hand while walking by rotating the handle bar</li>
-              <li>More comfort while walking as the load is distributed to the entire forearm.</li>
-              <li>Jarring forces are reduced by telescopic damper</li>
-            </ul>
-        </div>
-        <div class="article">
-            <h2 id='p2'>CFRP mirror for space application</h2>
-            <p>
-              <b>Summary:</b><br>Optimized CFRP honeycomb parameters using modal and structural analysis in ANSYS. Manufactured and assembled a composite CFRP mirror. Optimized Mirror Fixation Device (MFD) parameters using Zernike analysis in MATLAB.
-                <canvas id="mirror_assembly"></canvas> <br>
-              This project was divided into 2 parts:
-              <ul>
-                <li><b>Prototyping of a composite mirror and optimisation of MFD:</b><br>
-                  <b>Place:</b> Sattelite Application Center of the Indian Space Research Organisation <br>
-                  <b>Details:</b>This part focused on designing and prototyping a CFRP honeycomb mirror with an aluminum active surface. The designing and prototyping were done for a 340 mm diameter due to time constraints while the MFD design was carried out for a 690 mm diameter mirror. The prototype mirror with a honeycomb core was fabricated using predefined design conditions. Another part focused on the analysis of MFDs for a 690 mm diameter mirror with a triangular honeycomb core. This was done using the ANSYS ACP module. Directional deformations on the mirror active surface were calculated in the ANSYS, which were used to calculate Zernike polynomial coefficients. These coefficients were then optimized.
-                </li>
-                <figure>
-                  <img src="/images/projects/FE-model.png" >
-                  <figcaption>Fig.1 - FE model for the composite mirror.</figcaption>
-                </figure>
-                <figure>
-                  <img src="/images/projects/dd-z.png" >
-                  <figcaption>Fig.2 - Directional deformations for 1g load in z direction for the composite mirror.</figcaption>
-                </figure>
-                <figure>
-                  <img src="/images/projects/vb.png" >
-                  <figcaption>Fig.3 - Honeycomb is being vacuum bagged.</figcaption>
-                </figure>
-                <figure>
-                  <img src="/images/projects/hc.png" >
-                  <figcaption>Fig.4 - Honeycomb machined into circular shape (before attaching top surface).</figcaption>
-                </figure>
-                <figure>
-                  <img src="/images/projects/inserts.png" >
-                  <figcaption>Fig.5 - Inserts are being machined to achieve planarity during surface finishing.</figcaption>
-                </figure>
-                <figure>
-                  <img src="/images/projects/finished.png" >
-                  <figcaption>Fig.6 - Finished prototype (Plano-convex aluminum plate is bonded to the CFRP sandwich pannel).</figcaption>
-                </figure>
-                <br>
-                <li><b>Optimisation of CFRP honeycomb parameters:</b> <br>
-                  <b>Place: </b>  Indian Institute of Technology, Tirupati<br>
-                  <b>Details: </b>During course of the project, we reviewed about various research papers where main objective was of replacing Zerodur with composite mirror which have high stiffness and good thermal stability and how to enhance the various material properties of composite mirror. Based on reviewed research papers we set our objectives to be optimization of the CFRP honeycomb sandwich parameters(cell size, and height) to maximize first natural frequency and minimize top surface deformation. We have completed the ANSYS analysis to study influence of cell size and height to optimize honeycomb performance. We accordingly prepared the mould of hexagonal honeycomb structure and carried out initial prototyping.
-                </li>
-              </ul>
-              <figure>
-                <img src="/images/projects/modeshape1.png" >
-                <figcaption>Fig.7 - Mode shape of first natural frequency for the CFRP honeycomb.</figcaption>
-              </figure>
-              <figure>
-                <img src="/images/projects/mould1.png" >
-                <figcaption>Fig.8 - Mould prepared for hand layup method using wire-EDM</figcaption>
-              </figure>
-              <figure>
-                <img src="/images/projects/mould2.png" >
-                <figcaption>Fig.9 - mould prepared for vacuum assisted resin transfer molding using wire-EDM. </figcaption>
-              </figure>
-              <figure>
-                <img src="/images/projects/vam.png" >
-                <figcaption>Fig.10 - Vacuum assisted resin transfer molding setup.</figcaption>
-              </figure>
-            </p>
-          </div>
-          <div class="article">
-            <h2 id="p3">Enigma - 2021</h2>
-            <b>About</b> <br>Enigma is a competitive ciphering and deciphering heist while looking for clues in the gigantic internet universe. Explore some amazing corners of the web-battling out puzzles and reading between the lines. Got stuck on some questions? Work your way out through your search engines.
-            <br><br> <b>Goals</b><br>Enigma as a medium is our way of exposing the participants to a myriad of exciting places on the internet. We strive to provide an unparalleled experience similar to an open world game — explore the depths of internet for clues, crack mind-bending puzzles, and get to know more about the rad things people are doing in the world. <br><br>
-            Every team's journey is unique and depends on how they approach a problem. Every question has a unique solution and it doesn't matter what path you take, it's important to remember what you're looking for. It's easy to get lost, you see
-            <br><br>
-            <b>Creators</b><br>
-                <ul>
-                  <li><a href="https://abstractxan.xyz/site/home">Priyansh Sangule</a></li>
-                  <li>Anup Kulkarni</li>
-                  <li>Bhargav</li>
-                  <li>Kranti</li>
-                  <li>Srikarah</li>
-                </ul>
-              <b>Previous Enigmas</b>
-                <ul>
-                  <li><a href="https://abstractxan.xyz/site/enigma_2020">Enigma 2020</a></li>
-                  <li> <a href="https://abstractxan.xyz/site/enigma_2019">Enigma 2019</a></li>
-                </ul>
-            </div>
-        </div>
+<body>
+  <div class="head">
+    <div class="head_col">
+      <a href="/index.html">
+        <img id="icon" src='/images/projects_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+      </a>
     </div>
+    <div class="head_col">
+      <div class="head_row">
+        <p id="title" onmouseover="onHover();" onmouseleave="onOut()"><a id='title_content'
+            href="/index.html">KosmoKnot</a></p>
+      </div>
+      <div class="head_row">
+        <a href="/site/projects.html">|Projects|</a>
+        <a href="/site/articles.html">|Articles|</a>
+        <a href="/site/resources.html">|Resources|</a>
+      </div>
+      <div class="head_row">
+        <a href="/site/logs.html">|Logs|</a>
+        <a href="/site/gallary.html">|Gallary|</a>
+        <a href="/site/about.html">|About|</a>
+      </div>
+      <div class="head_row">
+        <div class="browser" style="padding-top:10px">
+          <a href="/site/browser.html">Open 3D Navigator</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
 
-      <!-- <h2 id='p3'>MATLAB app to design gears</h2>
+  <h1>Projects</h1>
+  <div class="section">
+    <div class="articles">
+      <div class="article">
+        <h2 id='p1'>Ergonomic crutches</h2>
+
+        <p>Designed crutches with a retrofittable attachment, and smart locking mechanism to improve user comfort and
+          provide additional body movements.
+          <canvas id="inter_iit"></canvas>
+        <figure>
+          <img src="/images/projects/crutch_parts.png">
+          <figcaption>Fig.11 - Various parts of ergonomic crutches.</figcaption>
+        </figure>
+        <br>
+        <b>Advantages of these crutches:</b>
+        </p>
+
+        <ul style="list-style-type: disc;">
+          <li>Can easily get up from seated position using hand grip (after the transformation)</li>
+          <li>Can carry items in hand while walking by rotating the handle bar</li>
+          <li>More comfort while walking as the load is distributed to the entire forearm.</li>
+          <li>Jarring forces are reduced by telescopic damper</li>
+        </ul>
+      </div>
+      <div class="article">
+        <h2 id='p2'>CFRP mirror for space application</h2>
+        <p>
+          <b>Summary:</b><br>Optimized CFRP honeycomb parameters using modal and structural analysis in ANSYS.
+          Manufactured and assembled a composite CFRP mirror. Optimized Mirror Fixation Device (MFD) parameters using
+          Zernike analysis in MATLAB.
+          <canvas id="mirror_assembly"></canvas> <br>
+          This project was divided into 2 parts:
+        <ul>
+          <li><b>Prototyping of a composite mirror and optimisation of MFD:</b><br>
+            <b>Place:</b> Sattelite Application Center of the Indian Space Research Organisation <br>
+            <b>Details:</b>This part focused on designing and prototyping a CFRP honeycomb mirror with an aluminum
+            active surface. The designing and prototyping were done for a 340 mm diameter due to time constraints while
+            the MFD design was carried out for a 690 mm diameter mirror. The prototype mirror with a honeycomb core was
+            fabricated using predefined design conditions. Another part focused on the analysis of MFDs for a 690 mm
+            diameter mirror with a triangular honeycomb core. This was done using the ANSYS ACP module. Directional
+            deformations on the mirror active surface were calculated in the ANSYS, which were used to calculate Zernike
+            polynomial coefficients. These coefficients were then optimized.
+          </li>
+          <figure>
+            <img src="/images/projects/FE-model.png">
+            <figcaption>Fig.1 - FE model for the composite mirror.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/projects/dd-z.png">
+            <figcaption>Fig.2 - Directional deformations for 1g load in z direction for the composite mirror.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="/images/projects/vb.png">
+            <figcaption>Fig.3 - Honeycomb is being vacuum bagged.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/projects/hc.png">
+            <figcaption>Fig.4 - Honeycomb machined into circular shape (before attaching top surface).</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/projects/inserts.png">
+            <figcaption>Fig.5 - Inserts are being machined to achieve planarity during surface finishing.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/projects/finished.png">
+            <figcaption>Fig.6 - Finished prototype (Plano-convex aluminum plate is bonded to the CFRP sandwich pannel).
+            </figcaption>
+          </figure>
+          <br>
+          <li><b>Optimisation of CFRP honeycomb parameters:</b> <br>
+            <b>Place: </b> Indian Institute of Technology, Tirupati<br>
+            <b>Details: </b>During course of the project, we reviewed about various research papers where main objective
+            was of replacing Zerodur with composite mirror which have high stiffness and good thermal stability and how
+            to enhance the various material properties of composite mirror. Based on reviewed research papers we set our
+            objectives to be optimization of the CFRP honeycomb sandwich parameters(cell size, and height) to maximize
+            first natural frequency and minimize top surface deformation. We have completed the ANSYS analysis to study
+            influence of cell size and height to optimize honeycomb performance. We accordingly prepared the mould of
+            hexagonal honeycomb structure and carried out initial prototyping.
+          </li>
+        </ul>
+        <figure>
+          <img src="/images/projects/modeshape1.png">
+          <figcaption>Fig.7 - Mode shape of first natural frequency for the CFRP honeycomb.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/projects/mould1.png">
+          <figcaption>Fig.8 - Mould prepared for hand layup method using wire-EDM</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/projects/mould2.png">
+          <figcaption>Fig.9 - mould prepared for vacuum assisted resin transfer molding using wire-EDM. </figcaption>
+        </figure>
+        <figure>
+          <img src="/images/projects/vam.png">
+          <figcaption>Fig.10 - Vacuum assisted resin transfer molding setup.</figcaption>
+        </figure>
+        </p>
+      </div>
+      <div class="article">
+        <h2 id="p3">Enigma - 2021</h2>
+        <b>About</b> <br>Enigma is a competitive ciphering and deciphering heist while looking for clues in the gigantic
+        internet universe. Explore some amazing corners of the web-battling out puzzles and reading between the lines.
+        Got stuck on some questions? Work your way out through your search engines.
+        <br><br> <b>Goals</b><br>Enigma as a medium is our way of exposing the participants to a myriad of exciting
+        places on the internet. We strive to provide an unparalleled experience similar to an open world game — explore
+        the depths of internet for clues, crack mind-bending puzzles, and get to know more about the rad things people
+        are doing in the world. <br><br>
+        Every team's journey is unique and depends on how they approach a problem. Every question has a unique solution
+        and it doesn't matter what path you take, it's important to remember what you're looking for. It's easy to get
+        lost, you see
+        <br><br>
+        <b>Creators</b><br>
+        <ul>
+          <li><a href="https://abstractxan.xyz/site/home">Priyansh Sangule</a></li>
+          <li>Anup Kulkarni</li>
+          <li>Bhargav</li>
+          <li>Kranti</li>
+          <li>Srikarah</li>
+        </ul>
+        <b>Previous Enigmas</b>
+        <ul>
+          <li><a href="https://abstractxan.xyz/site/enigma_2020">Enigma 2020</a></li>
+          <li> <a href="https://abstractxan.xyz/site/enigma_2019">Enigma 2019</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- <h2 id='p3'>MATLAB app to design gears</h2>
       <p>Built a MATLAB app which gave gear design parameters, and material preferences as outputs for the input operating conditions.</p>
       <h2 id='p4'>Simulating pedestrain head impact with car bonnet</h2>
       <h2 id='p5'>Low cost telescope mount design</h2>
       <h2 id='p6'>Paving blocks using indutrial waste</h2>
       <h2 id='p7'>Food wrapper from banana leaves</h2> -->
 
-    <footer>
-      <div style="width: 100%;   background-color: #333;">
-        <div class="footer">
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc" alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
-          <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img id="beaker" src="/images/beaker.webp" /></a>
-          <a rel="github" href="https://github.com/kosmoknot"><img id="git"  src="/images/github.webp" /></a>
-          <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
-        </div>
-        <div class="footer_text">
-          <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
-        </div>
+  <footer>
+    <div style="width: 100%;   background-color: #333;">
+      <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
+            alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
+        <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img
+            id="beaker" src="/images/beaker.webp" /></a>
+        <a rel="github" href="https://github.com/kosmoknot"><img id="git" src="/images/github.webp" /></a>
+        <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
+      </div>
+      <div class="footer_text">
+        <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+      </div>
     </div>
   </footer>
 </body>
 <script type="text/javascript">
-function onHover(){
-  let image = document.getElementById('icon');
-  let title = document.getElementById('title_content');
-  image.src = '/images/projects_explosion.gif';
-  title.style.color =  '#ffc107';
-}
+  function onHover() {
+    let image = document.getElementById('icon');
+    let title = document.getElementById('title_content');
+    image.src = '/images/projects_explosion.gif';
+    title.style.color = '#ffc107';
+  }
 
-function onOut(){
-  let image = document.getElementById('icon');
-  let title = document.getElementById('title_content');
-  image.src = '/images/projects_icon.png';
-  title.style.color = 'white';
-}
+  function onOut() {
+    let image = document.getElementById('icon');
+    let title = document.getElementById('title_content');
+    image.src = '/images/projects_icon.png';
+    title.style.color = 'white';
+  }
 </script>
+
 </html>
