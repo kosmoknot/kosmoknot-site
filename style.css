@@ -41,6 +41,16 @@ h1{
   text-decoration: none;
   color: #2bbc8a;
   text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  height: 130px;
+}
+
+.head_grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .head a:hover{
@@ -51,9 +61,9 @@ h1{
 
 .head{
   display: flex;
+  justify-content: start;
   flex-flow: row;
   flex-wrap: nowrap;
-  justify-content: center;
   width: 650px;
   margin-left: auto;
   margin-right: auto;
@@ -67,13 +77,8 @@ h1{
   justify-content: space-around;
 }
 
-.head_row{
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-}
-.nav{
+
+  .nav{
   color: #c9cacc;
   width: 650px;
   font-size: 18px;
@@ -285,7 +290,7 @@ h1{
 .browser a{
   text-align: center;
   color: #c9cacc;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   background-color: #333;
   padding: 4px 4px;
@@ -522,11 +527,13 @@ button:hover{
   }
   .head_row{
     flex-flow: column;
+    
 
     text-align: center;
   }
   .head{
-    display: block;
+    display: flex;
+    
     font-size: 20px;
     width: 97%;
     margin-left: auto;
