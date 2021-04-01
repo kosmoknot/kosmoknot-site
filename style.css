@@ -525,15 +525,13 @@ button:hover{
   .nav .about a{
     font-size: 20px;
   }
-  .head_row{
-    flex-flow: column;
-    
-
+  .head_grid{
+    grid-template-columns: auto;
     text-align: center;
   }
   .head{
     display: flex;
-    
+    flex-direction: column;
     font-size: 20px;
     width: 97%;
     margin-left: auto;
