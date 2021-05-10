@@ -181,7 +181,7 @@ h1{
   font-size: 18px;
   margin-left: auto;
   margin-right: auto;
-  text-align: justify;
+  text-align: left;
   margin-top: 30px;
 
 }
@@ -408,7 +408,7 @@ h1{
   border: none;
   font-size: 16px;
   color: #c9cacc;
-  text-align: justify;
+  text-align: left;
   line-height: 27px;
 }
 
@@ -418,7 +418,7 @@ h1{
 
 .collapsible_content{
   display: none;
-  text-align: justify;
+  text-align: left;
   font-size: 16px;
 }
 
