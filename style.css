@@ -28,7 +28,6 @@ body {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
-
 h1{
   font-size: 25px;
   margin-left: auto;
@@ -198,12 +197,15 @@ h1{
   font-size: 18px;
   text-align:justify;
   vertical-align: middle;
-  color: #c9cacc;
+  color:#c9cacc;
 }
 .section a{
   text-decoration: none;
   color: #2bbc8a;
   font-size: 18px;
+}
+.section a:hover{
+  color:#c9cacc;
 }
 
 .section td a:hover{
@@ -279,6 +281,29 @@ h1{
 .section ol{
   list-style-type: disclosure-closed;
   color: #c9cacc;
+}
+
+.link_dump{
+  font-size: 16px;
+  color: #c9cacc;
+  background-color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #969696
+
+}
+.link_dump a{
+  font-size: 18px;
+  color: #2bbc8a;
+  text-decoration: none;
+  
+}
+.link_dump a:hover{
+  color: #c9cacc;
+}
+.link_dump img{
+  width: 22px;
+  vertical-align: -5px;
 }
 .code {
   font: courier;
