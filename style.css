@@ -146,7 +146,7 @@ h1{
 }
 .nav ol a:hover{
   list-style: none;
-  color: #c9cacc;
+  color: #2bbc8a;
 }
 .nav ol{
   list-style-type: disclosure-closed;
@@ -220,7 +220,7 @@ h1{
 }
 .section time{
   font-size: 16px;
-  color: #6e6e6e;
+  color: #7e7e7e;
   vertical-align: baseline;
 }
 .section b{
@@ -306,10 +306,16 @@ h1{
   vertical-align: -5px;
 }
 .code {
-  font: courier;
-  background-color: #333;
-  padding: 2px;
-  color: #c9cacc;
+  margin-top:20px;
+  display:block;
+  font-family:input_mono_regular;
+  font-size:14px;
+  background-color:#333;
+  border:4px #c1c1c1;
+  border-style:dashed solid;
+  padding:5px 15px 5px 15px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch
 }
 
 .browser a{
