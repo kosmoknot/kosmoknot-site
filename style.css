@@ -356,7 +356,7 @@ h1{
   align-content: flex-start;
   font-size: 16px;
   color: #c9cacc;
-  text-align: justify;
+  text-align: left;
   word-spacing: 0px;
 }
 .article{
