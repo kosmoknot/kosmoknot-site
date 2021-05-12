@@ -373,8 +373,9 @@ h1{
 }
 
 .article a{
-  color: inherit;
+  color: #2bbc8a;
   text-decoration: underline;
+  text-underline-offset: 5px;
   font-size: inherit;
 }
 .about a{
