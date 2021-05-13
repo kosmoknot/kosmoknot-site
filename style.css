@@ -380,6 +380,7 @@ h1{
 }
 .about a{
   text-decoration: underline;
+  text-underline-offset: 5px;
   font-size: 20px;
   color: #c9cacc;
   text-align: left;
