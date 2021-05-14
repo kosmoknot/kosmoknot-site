@@ -6,10 +6,10 @@ function display(obj) {
     content.style.display = "block";
   }
 }
-function search() {
+function link_search() {
   var input = document.getElementById("searchBox");
   var filter = input.value.toUpperCase();
-  links = document.getElementsByClassName("link_dump");
+  links = document.getElementsByTagName("li");
   for (var i = 0; i < links.length; i++) {
     content_url = links[i].getElementsByTagName("a")[0];
     content_tag = links[i].getElementsByTagName("i")[0];

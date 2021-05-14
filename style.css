@@ -286,25 +286,34 @@ h1{
 .link_dump{
   font-size: 16px;
   color: #c9cacc;
-  background-color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #969696
+  /* background-color: #333; */
+  /* text-align: center; */
+  /*
+  border-bottom: 1px solid #969696 */
 
+}
+.link_dump li{
+  margin-bottom: 25px;
 }
 .link_dump a{
   font-size: 18px;
-  color: #2bbc8a;
-  text-decoration: none;
+  color:#c9cacc ;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #2bbc8a;
   
 }
 .link_dump a:hover{
-  color: #c9cacc;
+  color: #2bbc8a;
 }
 .link_dump img{
   width: 22px;
   vertical-align: -5px;
 }
+.link_dump i{
+  color: #2bbc8a;
+}
+
 .code {
   margin-top:20px;
   display:block;
@@ -373,17 +382,22 @@ h1{
 }
 
 .article a{
-  color: #2bbc8a;
+  color: #c9cacc;
   text-decoration: underline;
+  text-decoration-color: #2bbc8a;
   text-underline-offset: 5px;
   font-size: inherit;
 }
 .about a{
   text-decoration: underline;
   text-underline-offset: 5px;
+  text-decoration-color: #2bbc8a;
   font-size: 20px;
   color: #c9cacc;
   text-align: left;
+}
+.about a:hover{
+  color: #2bbc8a;
 }
 .about {
   font-size: 20px;
@@ -396,7 +410,7 @@ h1{
 }
 
 .log ol{
-  list-style: decimal;
+  list-style: none;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -408,20 +422,27 @@ h1{
   padding: 4px 6px;
   text-decoration: none;
   border-radius: 5px;
-  background-color: #333;
+  background-color: none; 
   font-size: 15px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border: 0.5px solid #555;;
+  border: none;
   font-size: 16px;
   color: #c9cacc;
   text-align: left;
   line-height: 27px;
 }
+.collapsible ins{
+  color: #c9cacc;
+  font-size: 18px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #2bbc8a;
+}
 
 .collapsible:hover{
-  background-color: #555;
+  background-color: #444;
 }
 
 .collapsible_content{
@@ -635,10 +656,7 @@ button:hover{
     margin-right: auto;
     background: gray;
   }
-  .link_dump img{
-    width: 22px;
-    vertical-align: -5px;
-  }
+
   .footer{
     width: 97%;
     margin-left: auto;
