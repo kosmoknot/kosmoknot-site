@@ -286,11 +286,6 @@ h1{
 .link_dump{
   font-size: 16px;
   color: #c9cacc;
-  /* background-color: #333; */
-  /* text-align: center; */
-  /*
-  border-bottom: 1px solid #969696 */
-
 }
 .link_dump li{
   margin-bottom: 25px;
@@ -311,7 +306,7 @@ h1{
   vertical-align: -5px;
 }
 .link_dump i{
-  color: #2bbc8a;
+  color: #888;
 }
 
 .code {
