@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Website of Anup Kulkarni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>KosmoKnot - Crypto Tools</title>
+    <link rel="icon" href="../images/logo.png" type="image/icon type">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="../script.js"></script>
+    <script type="text/javascript" src="../cryptojs/aes.js"></script>
+    <script type="text/javascript" src="../cryptojs/sha256.js"></script>
+    <script type="text/javascript" src="../cryptojs/crypto.js"></script>
+    <style>
+        .buttons {
+            display: flex;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .input {
+            width: 97%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            height: 100px;
+            background-color: #c9cacc;
+            border: none;
+        }
+
+        .passcode {
+            width: 97%;
+            background-color: #c9cacc;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            border: none;
+            height: 30px;
+        }
+
+        .output {
+            width: 97%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            font-size: 20px;
+            overflow: visible;
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="head_col">  
+            <a href="/index.html">
+                <img id="icon" alt="lock" src='/images/lock.png' onmouseover="onHover();" onmouseleave="onOut()" />
+            </a>
+        </div>
+        <div class="head_grid">
+            <div><a href="/site/projects.html">|Projects|</a></div>
+            <div><a href="/site/articles.html">|Articles|</a></div>
+            <div><a href="/site/gallary.html">|Gallery|</a></div>
+            <div><a href="/site/resources.html">|Resources|</a></div>
+            <div><a href="/site/logs.html">|Logs|</a></div>
+            <div><a href="/site/about.html">|About|</a></div>
+            <div class="browser" style="padding-top:10px"><a href="/site/browser.html">Open 3D Navigator</a></div>
+        </div>
+    </div>
+    <h1>Crypto Tools</h1>
+    <div class="section">
+        <div class="article">
+            <h2>AES</h2>
+            Input:<textarea class="input" id="aes-input"> </textarea><br> <br>
+            Passcode:<input class="passcode" type="text" id="aes-passcode"> <br> <br>
+            <div class="buttons">
+                <button type=button onclick=AESencode() class=btn> Encrypt </button>
+                <button type=button onclick=AESdecode() class=btn> Decrypt </button>
+            </div> <br>
+            <span id="aes-output" class="output"></span>
+        </div>
+        <div class="article">
+            <h2>SHA-256</h2>
+            Input:<textarea class="input" id="sha-input"> </textarea><br> <br>
+            <div class="buttons">
+                <button type=button onclick=hash() class=btn> Hash </button>
+            </div> <br>
+            <span id="hash" class="output"></span>
+        </div>
+    </div>
+    <footer>
+        <div style="width: 100%; background-color: #333;">
+            <div class="footer">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
+                        alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
+                <a rel="beaker browser"
+                    href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img id="beaker"
+                        src="/images/beaker.webp" /></a>
+                <a rel="github" href="https://github.com/kosmoknot"><img id="git" src="/images/github.webp" /></a>
+                <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo"
+                        src="/images/neocities.webp" /></a>
+            </div>
+            <div class="footer_text">
+                <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
