@@ -54,11 +54,13 @@ function log_search() {
 }
 
 function onHover() {
-  let image = document.getElementById("icon");
-  image.src = "/images/logo2.png";
+  let name = event.target.alt;
+  let path= "/images/"+name+".gif"
+  event.target.src = path;
 }
 
 function onOut() {
-  let image = document.getElementById("icon");
-  image.src = "/images/logo.png";
+  let name = event.target.alt;
+  let path= "/images/"+name+".png"
+  event.target.src = path;
 }

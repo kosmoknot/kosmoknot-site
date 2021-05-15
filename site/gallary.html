@@ -31,7 +31,7 @@
   <div class="head">
     <div class="head_col">
       <a href="/index.html">
-        <img id="icon" src='/images/gallary_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+        <img id="icon" alt="gallery" src='/images/gallery.png' onmouseover="onHover();" onmouseleave="onOut()" />
       </a>
     </div>
     <div class="head_grid">
@@ -64,53 +64,54 @@
 
       <div class="article">
         <h2 id="pixels">Pixel drawings</h2>
-        <div style="display: flex; width: 100%; flex-wrap: wrap; text-align: center;">
+        <div class="pixel_art">
           <figure>
-            <img src="/images/icon.png" style="width:200px">
+            <img src="/images/home.png" alt="home" onmouseover="onHover();" onmouseleave="onOut()">
             <figcaption>Celestial body-1</figcaption>
           </figure>
           <figure>
-            <img src="/images/logs_icon.png" style="width:200px">
+            <img src="/images/logs.png" alt="logs" onmouseover="onHover();" onmouseleave="onOut()">
             <figcaption>Celestial body-2</figcaption>
           </figure>
           <figure>
-            <img src="/images/projects_icon.png" style="width:200px">
+            <img src="/images/projects.png" alt="projects" onmouseover="onHover();" onmouseleave="onOut()">
             <figcaption>Celestial body-3</figcaption>
           </figure>
           <figure>
-            <img src="/images/articles_icon.png" style="width:200px">
+            <img src="/images/articles.png" alt="articles" onmouseover="onHover();" onmouseleave="onOut()">
             <figcaption>Celestial body-4</figcaption>
           </figure>
           <figure>
-            <img src="/images/gallary_icon.png" style="width:200px">
+            <img src="/images/gallery.png" alt="gallery" onmouseover="onHover();" onmouseleave="onOut()">
             <figcaption>Celestial body-5</figcaption>
           </figure>
           <figure>
-            <img src="/images/resources_icon.png" style="width:200px">
+            <img src="/images/resources.png" alt="resources" onmouseover="onHover();" onmouseleave="onOut()">
             <figcaption>Celestial body-6</figcaption>
           </figure>
           <figure>
-            <img src="/images/red_heart.png" style="width:200px">
+            <img src="/images/red_heart.png">
             <figcaption>Heart</figcaption>
           </figure>
         </div>
-
-      </div>
-      <div class="article">
-        <h2 id="3dm">3D-Models</h2>
-        <form>
-          <label for="models">Choose a model:</label> <br>
-          <select id="models" name="models">
-            <option value="mirror_assembly">Mirror assembly</option>
-            <option value="inter_iit">Ergonomic crutches</option>
-          </select>
-          <button type="button" id="sub_button" name="submit" onclick="loadModel();">Load</button>
-          <p style="font-size:16px;">(Loading might be slow depending on your RAM and netspeed)</p>
-        </form>
-        <canvas id="models_show"></canvas>
       </div>
 
     </div>
+    <div class="article">
+      <h2 id="3dm">3D-Models</h2>
+      <form>
+        <label for="models">Choose a model:</label> <br>
+        <select id="models" name="models">
+          <option value="mirror_assembly">Mirror assembly</option>
+          <option value="inter_iit">Ergonomic crutches</option>
+        </select>
+        <button type="button" id="sub_button" name="submit" onclick="loadModel();">Load</button>
+        <p style="font-size:16px;">(Loading might be slow depending on your RAM and netspeed)</p>
+      </form>
+      <canvas id="models_show"></canvas>
+    </div>
+
+  </div>
 
   </div>
 
@@ -135,21 +136,5 @@
 
   </footer>
 </body>
-<script type="text/javascript">
-  function onHover() {
-    let image = document.getElementById('icon');
-    let title = document.getElementById('title_content');
-    image.src = '/images/gallary_explosion.gif';
-    title.style.color = '#ffc107';
-  }
-
-  function onOut() {
-    let image = document.getElementById('icon');
-    let title = document.getElementById('title_content');
-    image.src = '/images/gallary_icon.png';
-    title.style.color = 'white';
-  }
-
-</script>
 
 </html>

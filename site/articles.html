@@ -16,7 +16,7 @@
   <div class="head">
     <div class="head_col">
       <a href="/index.html">
-        <img id="icon" src='/images/articles_icon.png' onmouseover="onHover();" onmouseleave="onOut()" />
+        <img id="icon" alt="articles"src='/images/articles.png' onmouseover="onHover();" onmouseleave="onOut()" />
       </a>
     </div>
     <div class="head_grid">
@@ -232,21 +232,4 @@
     </div>
   </footer>
 </body>
-<script type="text/javascript">
-  function onHover() {
-    let image = document.getElementById('icon');
-    let title = document.getElementById('title_content');
-    image.src = '/images/articles_explosion.gif';
-    title.style.color = '#ffc107';
-  }
-
-  function onOut() {
-    let image = document.getElementById('icon');
-    let title = document.getElementById('title_content');
-    image.src = '/images/articles_icon.png';
-    title.style.color = 'white';
-  }
-
-</script>
-
 </html>
