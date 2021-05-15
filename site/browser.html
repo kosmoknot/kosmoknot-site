@@ -125,40 +125,41 @@
 
 
       var Geo = new THREE.SphereGeometry(2, 32, 32);
-      var Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/icon.png'), side: THREE.DoubleSide });
+      var Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/home.png'), side: THREE.DoubleSide });
       HomeSphere = new THREE.Mesh(Geo, Mat);
       scene.add(HomeSphere)
       HomeSphere.position.set(-7, 0, 0);
 
       Geo = new THREE.SphereGeometry(3, 32, 32);
-      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/resources_icon.png'), side: THREE.DoubleSide });
+      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/resources.png'), side: THREE.DoubleSide });
       ResourcesSphere = new THREE.Mesh(Geo, Mat);
       scene.add(ResourcesSphere)
       ResourcesSphere.position.set(0, -8, 0);
       ResourcesSphere.rotation.z = Math.PI / 2.5;
 
       Geo = new THREE.SphereGeometry(3, 32, 32);
-      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/projects_icon.png'), side: THREE.DoubleSide });
+      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/projects.png'), side: THREE.DoubleSide });
       ProjectSphere = new THREE.Mesh(Geo, Mat);
       scene.add(ProjectSphere)
       ProjectSphere.position.set(0, 0, -8);
+      ProjectSphere.rotation.y = -Math.PI / 4;
 
       Geo = new THREE.SphereGeometry(3, 32, 32);
-      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/gallary_icon.png'), side: THREE.DoubleSide });
+      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/gallery.png'), side: THREE.DoubleSide });
       GallarySphere = new THREE.Mesh(Geo, Mat);
       scene.add(GallarySphere)
       GallarySphere.position.set(0, 11, 0);
       GallarySphere.rotation.z = -Math.PI / 2;
 
       Geo = new THREE.SphereGeometry(1.5, 32, 32);
-      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/logs_icon.png'), side: THREE.DoubleSide });
+      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/logs.png'), side: THREE.DoubleSide });
       LogSphere = new THREE.Mesh(Geo, Mat);
       scene.add(LogSphere)
       LogSphere.position.set(0, 0, 8);
       LogSphere.rotation.y = Math.PI / 2;
 
       Geo = new THREE.SphereGeometry(5, 32, 32);
-      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/articles_icon.png'), side: THREE.DoubleSide });
+      Mat = new THREE.MeshBasicMaterial({ map: loader.load('/images/articles.png'), side: THREE.DoubleSide });
       ArticleSphere = new THREE.Mesh(Geo, Mat);
       scene.add(ArticleSphere)
       ArticleSphere.position.set(13, 0, 0);
@@ -304,7 +305,7 @@
       }
 
       else if (intersects[0].object == GallarySphere) {
-        document.getElementById('launcher').innerHTML = "Gallary";
+        document.getElementById('launcher').innerHTML = "Gallery";
         document.getElementById('launcher').setAttribute('onclick', "location.href='/site/gallary.html'");
       }
       else if (intersects[0].object == ResourcesSphere) {
