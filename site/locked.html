@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="description" content="Personal Website of Anup Kulkarni">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>KosmoKnot - Crypto Tools</title>
+    <title>KosmoKnot - Locked</title>
     <link rel="icon" href="../images/logo.png" type="image/icon type">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="../script.js"></script>
     <script type="text/javascript" src="../cryptojs/aes.js"></script>
-    <script type="text/javascript" src="../cryptojs/sha256.js"></script>
-    <script type="text/javascript" src="../cryptojs/crypto.js"></script>
+    <script type="text/javascript" src="../cryptojs/locked.js"></script>
     <style>
         .buttons {
             display: flex;
@@ -49,12 +48,17 @@
     </div> <br> <br>
     <h1>This page is locked</h1>
     <div class="section">
-        Passcode:<input class="passcode" type="text" id="aes-passcode"> <br> <br>
+        Passcode:<input class="passcode" type="text" id="passcode"> <br> <br>
         <div class="buttons">
-            <button type=button onclick=AESdecode() class=btn> Enter </button>
+            <button type=button onclick=unlock() class=btn> Enter </button>
         </div> <br>
     </div>
-    <div id="locked"></div>
+    <div class="section">
+        <div id="locked">
+            <img style="width: 300px;margin: 10px auto 20px;display: block;" src="/images/no.gif">
+        </div>
+    </div>
+
     <footer>
             <div class="footer">
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
