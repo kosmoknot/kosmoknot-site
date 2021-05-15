@@ -18,18 +18,7 @@
             text-align: center;
             font-size: 22px;
         }
-
-        .input {
-            width: 97%;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 20px;
-            height: 100px;
-            background-color: #c9cacc;
-            border: none;
-        }
-
-        .passcode {
+       .passcode {
             width: 97%;
             background-color: #c9cacc;
             margin-left: auto;
@@ -37,16 +26,6 @@
             font-size: 20px;
             border: none;
             height: 30px;
-        }
-
-        .output {
-            width: 97%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-            font-size: 20px;
-            overflow: visible;
-            height: 10px;
         }
     </style>
 </head>
@@ -67,28 +46,15 @@
             <div><a href="/site/about.html">|About|</a></div>
             <div class="browser" style="padding-top:10px"><a href="/site/browser.html">Open 3D Navigator</a></div>
         </div>
-    </div>
-    <h1>Crypto Tools</h1>
+    </div> <br> <br>
+    <h1>This page is locked</h1>
     <div class="section">
-        <div class="article">
-            <h2>AES</h2>
-            Input:<textarea class="input" id="aes-input"> </textarea><br> <br>
-            Passcode:<input class="passcode" type="text" id="aes-passcode"> <br> <br>
-            <div class="buttons">
-                <button type=button onclick=AESencode() class=btn> Encrypt </button>
-                <button type=button onclick=AESdecode() class=btn> Decrypt </button>
-            </div> <br>
-            <span id="aes-output" class="output"></span>
-        </div>
-        <div class="article">
-            <h2>SHA-256</h2>
-            Input:<textarea class="input" id="sha-input"> </textarea><br> <br>
-            <div class="buttons">
-                <button type=button onclick=hash() class=btn> Hash </button>
-            </div> <br>
-            <span id="hash" class="output"></span>
-        </div>
+        Passcode:<input class="passcode" type="text" id="aes-passcode"> <br> <br>
+        <div class="buttons">
+            <button type=button onclick=AESdecode() class=btn> Enter </button>
+        </div> <br>
     </div>
+    <div id="locked"></div>
     <footer>
             <div class="footer">
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
@@ -103,7 +69,6 @@
             <div class="footer_text">
                 <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
             </div>
-
     </footer>
 </body>
 
