@@ -422,17 +422,29 @@ summary ins{
 .log p{
   margin-left: 25px;
 }
+.tiles{
+  width: 95%;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+}
+.tiles img{
+  width: 250px;
+}
+/* .tiles figure{
+  border: 2px #444 solid;
+  border-radius: 5px;
+} */
 summary ins{
-  /* margin-left: 20px; */
   font-size: 20px;
   color: #c9cacc;
   text-decoration: underline;
   text-decoration-color: #2bbc8a;
   text-underline-offset: 5px;
 }
-summary{
 
-}
 summary p {
   font-size: 18px;
   color: #7e7e7e;
