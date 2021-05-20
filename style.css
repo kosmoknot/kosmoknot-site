@@ -423,20 +423,25 @@ summary ins{
   margin-left: 25px;
 }
 .tiles{
-  width: 95%;
-  text-align: center;
-  font-size: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  -ms-flex-align: center;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
 }
 .tiles img{
-  width: 250px;
+  width: 300px;
+  vertical-align: -10px;
 }
-/* .tiles figure{
-  border: 2px #444 solid;
-  border-radius: 5px;
-} */
+.tiles img:hover{
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+.tiles a {
+  text-align: center;
+}
 summary ins{
   font-size: 20px;
   color: #c9cacc;
@@ -695,9 +700,6 @@ button:hover{
     justify-content: left;
 
   }
-  .pagination a{
-    font-size: 14px;
-  }
   .section b{
     font-size: 16px;
   }
@@ -723,5 +725,8 @@ button:hover{
     width: 97%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .tiles{
+    grid-template-columns: auto;
   }
 }

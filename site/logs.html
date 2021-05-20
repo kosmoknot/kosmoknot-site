@@ -16,7 +16,7 @@
   <div class="head">
     <div class="head_col">
       <a href="/index.html">
-        <img id="icon" alt="logs"src='/images/logs.png' onmouseover="onHover();" onmouseleave="onOut()" />
+        <img id="icon" alt="logs" src='/images/logs.png' onmouseover="onHover();" onmouseleave="onOut()" />
       </a>
     </div>
     <div class="head_grid">
@@ -33,69 +33,55 @@
   <br>
 
   <h1>Logs</h1>
-  <div class="section">
-    <div style="text-align: center;">
-      <input id="searchBox" placeholder="Search.." style="text-align: center; font-size: 18px;" oninput="log_search()">
-    </div>
-  </div>
-    <div class="tiles">
-      <figure>
-        <img src="/images/logs/camera.gif" alt="camera"> <br>
-        <caption>Movies</caption> 
-      </figure>
+  <div class="tiles">
+    <a href="/site/books.html">
       <figure>
         <img src="/images/logs/books.png" alt="Books"> <br>
-        <caption>Books</caption> 
+        <caption>Books</caption>
       </figure>
+    </a>
+    <a href="/site/movies.html">
       <figure>
-        <img src="/images/logs/travel.png" alt="Travel"> <br>
-        <caption>Travel</caption> 
+        <img src="/images/logs/camera.gif" alt="camera"> <br>
+        <caption>Movies</caption>
       </figure>
-      <figure>
-        <img src="/images/logs/food.png" alt="Food"> <br>
-        <caption>Food</caption> 
-      </figure>
-      <figure>
-        <img src="/images/logs/show.gif" alt="shows"> <br>
-        <caption>Shows+Anime</caption> 
-      </figure>
+    </a>
+    <a href="/site/games.html">
       <figure>
         <img src="/images/logs/games.gif" alt="Games"> <br>
-        <caption>Games</caption> 
+        <caption>Games</caption>
       </figure>
-    </div>
-  </div>
-  <div class="section">
-    <div class="log" id="l6">
-      <h2>Books</h2>
-      <ol>
-        <li>
-          <details>
-            <summary>
-              <ins>Thousand
-                years of solitude</ins><br>
-              <div class="rating">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-              </div>
-            </summary>
-            <p></p>
-          </details>
-        </li>
-      </ol>
-    </div>
+    </a>
+    <a href="/site/travel.html">
+      <figure>
+        <img src="/images/logs/travel.png" alt="Travel"> <br>
+        <caption>Travel</caption>
+      </figure>
+    </a>
+    <a href="/site/shows.html">
+      <figure>
+        <img src="/images/logs/show.gif" alt="shows"> <br>
+        <caption>Shows+Anime</caption>
+      </figure>
+    </a>
+    <a href="/site/food.html">
+      <figure>
+        <img src="/images/logs/food.png" alt="Food"> <br>
+        <caption>Food</caption>
+      </figure>
+    </a>
+  </div> 
 
 
+  <!-- <div class="section">
     <div class="log" id="l5">
       <h2>Travel</h2>
       <ol>
         <li>
           <details>
             <summary>
-              <ins>Rajgad</ins> <br> <p>6<sup>th</sup> Mar 21 => 7<sup>th</sup> Mar 21</p>
+              <ins>Rajgad</ins> <br>
+              <p>6<sup>th</sup> Mar 21 => 7<sup>th</sup> Mar 21</p>
             </summary>
             <p> <a href="https://en.wikipedia.org/wiki/Rajgad_Fort">Rajgad</a>, formerly known as Murumdevs is one of
               the best-preserved forts in Maharastra and served as an early capital of the <a
@@ -127,7 +113,8 @@
         <li>
           <details>
             <summary>
-              <ins>Harishchandragad</ins> <br><p>13<sup>th</sup> Mar 21 => 14<sup>th</sup> Mar 21</p> 
+              <ins>Harishchandragad</ins> <br>
+              <p>13<sup>th</sup> Mar 21 => 14<sup>th</sup> Mar 21</p>
             </summary>
             <p> <a href="https://en.wikipedia.org/wiki/Harishchandragad">Harishchandragad</a> named after king <a
                 href="https://en.wikipedia.org/wiki/Harishchandra">Harishchandra</a> was built during <a
@@ -156,13 +143,8 @@
         <li>
           <details>
             <summary>
-              <ins>Ballad of Buster Scruggs (2018) English</ins><br><p>16<sup>th</sup> Jan 21</p>
-              <div class="rating">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-                <img src="/images/rating.png" style="width: 25px;">
-              </div>
+              <ins>Ballad of Buster Scruggs (2018) English</ins><br>
+              <p>16<sup>th</sup> Jan 21</p>
             </summary>
             <p>Expectations are always high for a Cohen bros film, and this one does deliver on them. After watching a
               few of their films, the style becomes familiar. Ballad of Buster Scruggs has a lot of that absurd
@@ -586,44 +568,7 @@
       </div>
     </div>
 
-    <div class="article">
-      <div class="log" id="l2">
-        <h2>Games</h2>
-        <ol>
-          <li>
-            <button type="button" class="collapsible" onclick="display(this);"><ins>Dota (2003)</ins> <br>9/10<br>MOBA
-            </button>
-            <div class="collapsible_content">
-              <p> Damn addictive, has a high entry barrier. </p>
-            </div>
-          </li>
-          <li>
-            <button type="button" class="collapsible" onclick="display(this);"><ins>Ori and will of the wisp
-                (2020)</ins> <br>10/10<br>Platformer
-            </button>
-            <div class="collapsible_content">
-              <p>One of the most beautiful games. Medium difficulty good for begginers</p>
-            </div>
-          </li>
-          <li>
-            <button type="button" class="collapsible" onclick="display(this);"><ins>Soma(2017)</ins>
-              <br>9/10<br>Survival horror
-            </button>
-            <div class="collapsible_content">
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <button type="button" class="collapsible" onclick="display(this);"><ins>Black Mesa(2021)</ins>
-              <br>9/10<br>First-person shooter
-            </button>
-            <div class="collapsible_content">
-              <p></p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
+
 
     <div class="article">
       <div class="log" id="l1">
@@ -734,20 +679,20 @@
     </div>
     manga : kingdom
   </div>
-  </div>
+  </div> -->
   <footer>
 
-      <div class="footer">
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
-            alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
-        <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img
-            id="beaker" src="/images/beaker.webp" /></a>
-        <a rel="github" href="https://github.com/kosmoknot"><img id="git" src="/images/github.webp" /></a>
-        <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
-      </div>
-      <div class="footer_text">
-        <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
-      </div>
+    <div class="footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
+          alt="Creative Commons License" src="/images/creative_commons_min.webp" /></a>
+      <a rel="beaker browser" href="hyper://434415d8dadfdbbeeb6971c42eaa7a37906c4d985a0c0902850d8354f693d76a/"><img
+          id="beaker" src="/images/beaker.webp" /></a>
+      <a rel="github" href="https://github.com/kosmoknot"><img id="git" src="/images/github.webp" /></a>
+      <a rel="neocities" href="https://neocities.org/site/kosmoknot"><img id="neo" src="/images/neocities.webp" /></a>
+    </div>
+    <div class="footer_text">
+      <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+    </div>
 
   </footer>
 </body>
