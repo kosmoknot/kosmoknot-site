@@ -1,11 +1,12 @@
 #! /usr/bin/bash
 
-printf "Started the push \n \n \nPushing to git\n"
+printf "Started the push \nPushing to git\n"
 
 git push
-printf "\n \n \n Pushing to neocities\n"
+printf "\nPushing to neocities\n"
 
+PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 neocities push .
 
-printf "\n \n \nneocities stats:\n"
+printf "\nneocities stats:\n"
 neocities info kosmoknot
