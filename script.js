@@ -26,41 +26,25 @@ function link_search() {
 function log_search() {
   var input = document.getElementById("searchBox");
   var filter = input.value.toUpperCase();
-  var visible =[];
-  var groups = document.getElementsByClassName("article");
-  names = document.getElementsByClassName("collapsible");
-  for (var i = 0; i < names.length; i++) {
-    var name = names[i].getElementsByTagName("ins")[0];
-    var search_name = name.innerHTML.toUpperCase();
-    var group = names[i].parentNode.parentNode.parentNode.parentNode;
-    var parent = names[i].parentNode;
-    if (search_name.indexOf(filter) != -1) {
-      names[i].style.display = "";
-      parent.style.display = "";
-      visible.push(group);
+  details = document.getElementsByTagName("details");
+  for (var i = 0; i < details.length; i++) {
+    var  detail = details[i].innerHTML.toUpperCase();
+    if (detail.indexOf(filter) != -1) {
+      details[i].style.display = "";
     } else {
-      names[i].style.display = "none";
-      parent.style.display = "none";
-    }
-  }
-
-  for(var i=0;i<groups.length;i++){
-    if(visible.includes(groups[i])==false){
-      groups[i].style.display = "none";
-    }else{
-      groups[i].style.display = "";
+      details[i].style.display = "none";
     }
   }
 }
 
 function onHover() {
   let name = event.target.alt;
-  let path= "/images/"+name+".gif"
+  let path = "/images/" + name + ".gif";
   event.target.src = path;
 }
 
 function onOut() {
   let name = event.target.alt;
-  let path= "/images/"+name+".png"
+  let path = "/images/" + name + ".png";
   event.target.src = path;
 }

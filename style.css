@@ -43,12 +43,7 @@ a {
 a:hover {
   color: #2bbc8a;
 }
-summary ins {
-  color: #c9cacc;
-  text-decoration: underline;
-  text-decoration-color: #2bbc8a;
-  text-underline-offset: 5px;
-}
+
 .head a {
   text-decoration: none;
   color: #2bbc8a;
@@ -347,16 +342,7 @@ summary ins {
   text-decoration: none;
   color: inherit;
 }
-.pagination {
-  display: block;
-  text-align: center;
-  color: #c9cacc;
-  width: 97%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 35px;
-  margin-top: 15px;
-}
+
 
 .articles {
   display: flex;
@@ -434,21 +420,7 @@ summary ins {
 .tiles a {
   text-align: center;
 }
-summary ins {
-  font-size: 20px;
-  color: #c9cacc;
-  text-decoration: underline;
-  text-decoration-color: #2bbc8a;
-  text-underline-offset: 5px;
-}
 
-summary p {
-  font-size: 18px;
-  color: #7e7e7e;
-  margin-left: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
 .rating {
   margin-top: 10px;
   margin-left: 25px;
@@ -456,38 +428,38 @@ summary p {
 .log button {
   margin-bottom: 20px;
 }
-.collapsible {
-  padding: 4px 6px;
-  text-decoration: none;
-  border-radius: 5px;
-  background-color: none;
-  font-size: 15px;
+details{
+  text-align: left;
+  font-size: 16px;
+}
+summary{
+  font-size: 16px;
+  color: #c9cacc;
+  background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border: none;
-  font-size: 16px;
-  color: #c9cacc;
   text-align: left;
-  line-height: 27px;
+  list-style: none;
+  padding: 5px 0px 10px 10px;
 }
-.collapsible ins {
-  color: #c9cacc;
-  font-size: 18px;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-color: #2bbc8a;
-}
-
-.collapsible:hover {
+summary:hover{
   background-color: #444;
 }
-
-.collapsible_content {
-  display: none;
-  text-align: left;
-  font-size: 16px;
+summary ins {
+  text-decoration: underline;
+  font-size: 18px;
+  text-decoration-color: #2bbc8a;
+  text-underline-offset: 5px;
 }
+
+summary p {
+  margin-left: 10px;
+}
+
 
 footer {
   width: 100%;
