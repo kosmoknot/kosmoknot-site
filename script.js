@@ -11,11 +11,8 @@ function link_search() {
   var filter = input.value.toUpperCase();
   links = document.getElementsByTagName("li");
   for (var i = 0; i < links.length; i++) {
-    content_url = links[i].getElementsByTagName("a")[0];
-    content_tag = links[i].getElementsByTagName("i")[0];
-    var search_url = content_url.innerHTML.toUpperCase();
-    var search_tag = content_tag.innerHTML.toUpperCase();
-    if (search_url.indexOf(filter) != -1 || search_tag.indexOf(filter) != -1) {
+    var content = links[i].innerHTML.toUpperCase();
+    if (content.indexOf(filter) != -1 ) {
       links[i].style.display = "";
     } else {
       links[i].style.display = "none";
