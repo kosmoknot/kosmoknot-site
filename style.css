@@ -627,6 +627,9 @@ button:hover {
   margin: 10px auto 20px;
   display: block;
 }
+#locked{
+  text-align: center;
+}
 @media screen and (max-width: 650px) {
   .link_dump {
     column-count: 1;
