@@ -11,22 +11,6 @@
     <script type="text/javascript" src="../script.js"></script>
     <script type="text/javascript" src="../cryptojs/aes.js"></script>
     <script type="text/javascript" src="../cryptojs/locked.js"></script>
-    <style>
-        .buttons {
-            display: flex;
-            text-align: center;
-            font-size: 22px;
-        }
-       .passcode {
-            width: 97%;
-            background-color: #c9cacc;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 20px;
-            border: none;
-            height: 30px;
-        }
-    </style>
 </head>
 
 <body>
@@ -46,8 +30,8 @@
             <div class="browser" style="padding-top:10px"><a href="/site/browser.html">Open 3D Navigator</a></div>
         </div>
     </div> <br> <br>
-    <h1>This page is locked</h1>
-    <div class="section">
+    <h1 id="title">This page is locked</h1>
+    <div class="section" style="text-align: center;">
         Passcode:<input class="passcode" type="text" id="passcode"> <br> <br>
         <div class="buttons">
             <button type=button onclick=unlock() class=btn> Enter </button>
@@ -55,7 +39,8 @@
     </div>
     <div class="section">
         <div id="locked">
-            <img style="width: 300px;margin: 10px auto 20px;display: block;" src="/images/no.gif">
+            <img id="blocked" style="width: 300px;margin: 10px auto 20px;display: block;" src="/images/no.gif">
+           <div style="display:none;" id="locked_content">U2FsdGVkX18OgyDv0838q7I/M3HikJNNxYpdPvfGnYc2m6OTV3TnWAqMfpYj0isPgA8OKdwxqET+imDLwz3XItRn0oLJSME47rxYTHuicvyCp4omBumt3pPrx+GFerdC</div>
         </div>
     </div>
 
