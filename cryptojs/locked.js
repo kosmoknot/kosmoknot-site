@@ -17,7 +17,7 @@ function unlock() {
   }
   if(count==10){
     let body = document.getElementsByTagName("body")[0];
-    body.innerHTML="Nope!"
+    body.innerHTML="Mission Failed!"
     body.style="font-size:50px;text-align: center;"
   }
 }
