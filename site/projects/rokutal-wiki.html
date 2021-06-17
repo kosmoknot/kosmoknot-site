@@ -5,45 +5,57 @@
     <meta charset="UTF-8">
     <meta name="description" content="Personal Website of Anup Kulkarni">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>KosmoKnot - Locked</title>
-    <link rel="icon" href="../images/logo.png" type="image/icon type">
-    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
-    <script type="text/javascript" src="../script.js"></script>
-    <script type="text/javascript" src="../cryptojs/aes.js"></script>
-    <script type="text/javascript" src="../cryptojs/locked.js"></script>
+    <title>Rokutal - Wiki</title>
+    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/script.js"></script>
+
 </head>
 
 <body>
     <div class="head">
         <div class="head_col">
             <a href="/index.html">
-                <img id="icon" alt="lock" src='/images/lock.png' onmouseover="onHover();" onmouseleave="onOut()" />
+                <img id="icon" alt="projects" src='/images/projects.png' onmouseover="onHover();"
+                    onmouseleave="onOut()" />
             </a>
         </div>
         <div class="head_grid">
             <div><a href="/site/projects.html">|Projects|</a></div>
             <div><a href="/site/articles.html">|Articles|</a></div>
-            <div><a href="/site/gallary.html">|Gallery|</a></div>
+            <div><a href="/site/gallary.html">|Gallary|</a></div>
             <div><a href="/site/resources.html">|Resources|</a></div>
             <div><a href="/site/logs.html">|Logs|</a></div>
             <div><a href="/site/about.html">|About|</a></div>
             <div class="browser" style="padding-top:10px"><a href="/site/browser.html">Open 3D Navigator</a></div>
         </div>
-    </div> <br> <br>
-    <h1 id="title">This page is locked</h1>
-    <div class="section" id="inputs" style="text-align: center;">
-        Passcode:<input class="passcode" type="text" id="passcode"> <br> <br>
-        <div class="buttons">
-            <button type=button onclick=unlock() class=btn> Enter </button>
-        </div> <br>
     </div>
-    <div class="section">
-        <div id="locked">
-            <img id="blocked" style="width: 300px;margin: 10px auto 20px;display: block;" src="/images/no.gif">
-        </div>
-        <div style="display:none;" id="locked_content">U2FsdGVkX18OgyDv0838q7I/M3HikJNNxYpdPvfGnYc2m6OTV3TnWAqMfpYj0isPgA8OKdwxqET+imDLwz3XItRn0oLJSME47rxYTHuicvyCp4omBumt3pPrx+GFerdC</div>
     </div>
+    <br>
+    <h1>Rokutal-Wiki</h1>
 
+    <div class="section">
+        <div class="articles">
+            <div class="article">
+                <figure>
+                    <img style="width: 200px;" src="/images/rokutal/rokutal_angry.png" alt="">
+                </figure>
+                Rokutal is a offline text encoder-decoder which can function as password manager or a vault to save
+                other sensetive data. <br> <br>
+                Rokku (ロック) and tAla (ताल) both mean lock in Japanese and Sanskrit resp. so Rokutal means locklock I
+                guess.
+                <br> <br>
+                Todo:
+                <ol>
+                    <li>Fix encry/decry functions</li>
+                    <li>define scrolls</li>
+                    <li>Render password username pair</li>
+                    <li>Add button to add data</li>
+                    <li>Can we use files on gdrive?</li>
+                </ol>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer">
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img id="cc"
@@ -56,7 +68,7 @@
                     src="/images/neocities.webp" /></a>
         </div>
         <div class="footer_text">
-            <p>KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0</p>
+            KosmoKnot Ⓒ 2021 — BY-NC-SA 4.0
         </div>
     </footer>
 </body>

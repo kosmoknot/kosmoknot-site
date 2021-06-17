@@ -202,15 +202,6 @@ a:hover {
   vertical-align: middle;
   color: #c9cacc;
 }
-.section a {
-  text-decoration: none;
-  color: #2bbc8a;
-  font-size: 18px;
-}
-.section a:hover {
-  color: #c9cacc;
-}
-
 .section td a:hover {
   color: #c9cacc;
 }
@@ -306,6 +297,7 @@ a:hover {
   text-underline-offset: 5px;
   text-decoration-color: #2bbc8a;
 }
+
 .link_dump a:hover {
   color: #2bbc8a;
 }
