@@ -1,8 +1,9 @@
 window.onload = function () {
+  var fileName = document.getElementById("file_name");
   var show = document.getElementById("show");
   const select = document.getElementById("select");
   select.onclick = async () => {
-    var roku_options ={
+    var roku_options = {
       types: [
         {
           description: 'scrolls',
@@ -15,8 +16,9 @@ window.onload = function () {
       multiple: false
     };
     const [fileHandle] = await showOpenFilePicker(roku_options)
-    const roku = await fileHandle.getFile();
-    const contents = await roku.text();
+    const scroll = await fileHandle.getFile();
+    const contents = await scroll.text();
+    fileName.innerHTML = scroll.name;
     show.innerText = contents;
   }
 }
@@ -41,5 +43,19 @@ function unlock() {
     let body = document.getElementsByTagName("body")[0];
     body.innerHTML = "Rokutal Flew Away"
     body.style = "font-size:50px;text-align: center;"
+  }
+}
+function modeChange() {
+  var modeButton = document.getElementById("mode");
+  if(modeShow.innerText == "Edit Mode"){
+    modeShow.innerText = "Read Mode";
+    document.getElementById("searchBox").style.display="inline";
+    document.getElementById("editScroll").style.display="none";
+    document.getElementById("readScroll").style.display="block";
+  }else if(modeShow.innerText == "Read Mode"){
+    modeShow.innerText = "Edit Mode";
+    document.getElementById("searchBox").style.display="none";
+    document.getElementById("editScroll").style.display="block";
+    document.getElementById("readScroll").style.display="none";
   }
 }

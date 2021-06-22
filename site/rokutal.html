@@ -3,44 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Personal Website of Anup Kulkarni">
+    <meta name="description" content="A wise owl">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Rokutal</title>
     <link rel="icon" href="../images/logo.png" type="image/icon type">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="/script.js"></script>
     <script type="text/javascript" src="/cryptojs/aes.js"></script>
-    <script type="text/javascript" src="/cryptojs/locked.js"></script>
+    <script type="text/javascript" src="/cryptojs/rokutal.js"></script>
 </head>
 
 <body>
     <div style="display: grid; grid-template-columns: auto; align-content: center; text-align: center;">
-        <div> <img style="width: 325px;" src="/images/rokutal/rokutal_angry.png" alt="Rokutal"></div>
-        <p style="font-size: 40px;">Rokutal</p>
+        <div> <img id="rokutal" style="width: 325px;" src="/images/rokutal/rokutal_angry.png" alt="Rokutal"></div>
+        <p style="font-size: 40px; margin-bottom: 0px;">Rokutal</p>
     </div>
     <div class="section" style="text-align: center;">
-        <p style="font-size: 20px;"> <a href="/site/projects/rokutal-wiki.html">Rokutal</a> is a wise owl who keeps your secrets safe</p>
+        <p style="font-size: 20px;"> <a href="/site/projects/rokutal-wiki.html">Rokutal</a> is a wise owl who keeps your
+            secrets safe</p>
         <hr>
         <div class="section" id="inputs" style="text-align: center;">
-            <button id="select">Select</button> your <a href="">scroll</a> which hides secrets<br> <br>
-            Passcode: <input class="passcode" type="text" id="passcode"> <br> <br>
+            <button id="select">Select</button> your <a href="">scroll</a> which hides secrets
+            <p style="border: 0.5px solid #555;" id="file_name"></p>
+            Passcode: <input class="passcode" type="password" id="passcode"> <br> <br>
             <div class="buttons">
                 <button type=button onclick=unlock() class=btn>Unlock</button>
                 <button type=button onclick=lock() class=btn>Lock</button>
             </div>
             <hr>
         </div>
-        <div>
-            <textarea id="show" style="width: 650px; height: 300px;"></textarea>
+        <div style="text-align: center;" id="warnings"></div>
+        <div class="locked" >
+            <p id="modeShow">Read Mode</p> <button id="mode" type=button onclick=modeChange()>Switch Modes</button> <br> <br>
+            <div style="text-align: center;">
+                <input id="searchBox" placeholder="Search.." oninput="search()">
+            </div> <br>
+            <textarea id="editScroll" style="width: 100%; height: 300px; display: none;"></textarea>
+            <div id="readScroll">
+                Here are secrets
+            </div>
         </div>
         <hr>
-        <div class="section">
-            <div id="locked">
-            </div>
-            <div style="display:none;" id="locked_content">
-                U2FsdGVkX18OgyDv0838q7I/M3HikJNNxYpdPvfGnYc2m6OTV3TnWAqMfpYj0isPgA8OKdwxqET+imDLwz3XItRn0oLJSME47rxYTHuicvyCp4omBumt3pPrx+GFerdC
-            </div>
-        </div>
     </div>
     <footer>
         <div class="footer">
