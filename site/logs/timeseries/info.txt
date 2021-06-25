@@ -1,0 +1,36 @@
+01A00 = 16 Jun 2021
+
+Format:
+
+Date (Sleep, Mood)
+    Activities
+    Projects
+    Notes
+
+Project List:
+
+1   Tracker     log everything
+2   locked      offline password manager
+3   website     kosmoknot.???
+
+Project stage list:
+
+0   idle
+1   planning
+2   research
+3   implementing
+4   testing
+5   documenting
+6   maintaining
+
+Activities List:
+
+0   idle
+1   movies
+2   series
+3   web_surf
+4   books
+5   art
+6   cooking
+7   travel
+8   others
