@@ -593,6 +593,42 @@ button:hover {
 #locked {
   text-align: center;
 }
+.time-container{
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+.graph{
+  display: inline;
+}
+.pie{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.pie-container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.color-box{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.entries ol{
+  list-style: disclosure-closed;
+}
+.overview{
+  margin-right: auto;
+  margin-left: auto;
+}
+.big-pie{
+margin-left: auto;
+margin-right: auto;
+ width: 300px;
+ height: 300px;
+ border-radius: 50%;
+}
 @media screen and (max-width: 650px) {
   .link_dump {
     column-count: 1;

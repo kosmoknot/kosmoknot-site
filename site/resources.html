@@ -50,7 +50,8 @@
       <div class="article" id="r6">
         <h2>Cheat Sheets</h2>
         <b>Vim</b> <br>
-        Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X. 
+        Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It
+        is included as "vi" with most UNIX systems and with Apple OS X.
         <ol style="list-style: decimal;">
           <li>h,j,k,l --&gt; left,bottom,top,right</li>
           <li>gg -top of doc</li>
@@ -84,7 +85,74 @@
           <li>:s/(find)/(replace)/g - Find and replace all</li>
           <li>:s/(find)/(replace)/gc - With confirmation</li>
         </ol>
+        <b>SVG</b> <br>
+        <ol>
+          <li>svg width="256" height="256" viewBox="0 0 256 256"></li> <br>
+          <li>
+            svg preserveAspectRatio="xMidYMid" <br>xMidYMid—uniform scaling, aligning to the middle. <br>
 
+            xMinYMin—uniform scaling, aligning to the top-left. <br>
+
+            xMaxYMax—uniform scaling, aligning to the bottom-right. <br>
+
+          </li> <br>
+          <li>
+            circle cx="100" cy="100" r="100" / <br>
+
+            cx—the centre “x” coordinate. <br>
+
+            cy—the centre “y” coordinate. <br>
+
+            r—the radius of the circle (half its width).
+
+          </li> <br>
+          <li>
+            ellipse cx="100" cy="100" rx="100" ry="50" / <br>
+
+            cx—the centre “x” coordinate. <br>
+
+            cy—the centre “y” coordinate. <br>
+
+            rx—the horizontal radius of the oval (half its width). <br>
+
+            ry—the verical radius of the oval (half its height). <br>
+
+          </li><br>
+          <li>
+
+            rect x="0" y="0" width="256" height="64" rx="5" ry="5" / <br>
+
+            x—the top left corner’s “x” coordinate.<br>
+
+            y—the top left corder’s “y” coordinate.<br>
+
+            width—the horizontal size of the rectangle.<br>
+
+            height—the vertical size of the rectangle.<br>
+
+            rx—for adding rounded corners; the horizontal radius of the rounding circle.<br>
+
+            ry—for adding rounded corners; the vertical radius of the rounding circle.<br>
+          </li> <br>
+          <li>
+            <a href="https://css-tricks.com/svg-path-syntax-illustrated-guide/">Path:</a> <br>
+           < path d="instructions here" / ><br>
+
+            M = move to <br>
+            L = line to <br>
+            H = horizontal line to <br>
+            V = vertical line to <br>
+            C = curve to <br>
+            S = smooth curve to <br>
+            Q = quadratic Bézier curve <br>
+            T = smooth quadratic Bézier curve to <br>
+            A rx ry rotate large_arc_flag sweep_flag x y  = eliptical arc<br>
+            Draw a elliptical arc from the current point to x, y. The ellipse has radius rx ry (major/minor axis), rotated by rotate (in degrees, clockwise.). The large_arc_flag and sweep_flag should be 1 or 0, they control which section of the ellipse to use.<br>
+            Z = close path <br> <br>
+            no caps to follow relative coordinates<br>
+          </li>
+
+        </ol>
       </div>
 
       <div class="article" id="r5">
