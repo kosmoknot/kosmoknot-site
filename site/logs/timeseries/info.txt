@@ -10,8 +10,7 @@ Date (Sleep, Mood)
 Project List:
 
 1   Tracker     log everything
-2   locked      offline password manager
-3   website     kosmoknot.???
+2   website     kosmoknot.???
 
 Project stage list:
 
